@@ -1,0 +1,95 @@
+/* Стили шапки сайта */
+.alra-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding: 15px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.alra-navigation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.alra-nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.alra-nav-item {
+  margin: 0 15px;
+  position: relative;
+}
+
+.alra-nav-item:not(:last-child)::after {
+  content: '•';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+.alra-nav-item a,
+.alra-nav-item .alra-active {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.alra-nav-item a:hover,
+.alra-nav-item .alra-active {
+  color: #0d3d29;
+}
+
+.alra-nav-item .alra-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #0d3d29;
+  margin-top: 5px;
+}
+
+.alra-nav-book a {
+  background-color: #0d3d29;
+  color: white !important; /* перекрываем обычный стиль ссылки */
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.alra-nav-book a:hover {
+  background-color: #1a5e3f;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .alra-nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .alra-nav-item {
+    margin: 5px 10px;
+  }
+  
+  .alra-nav-item:not(:last-child)::after {
+    display: none;
+  }
+} 
