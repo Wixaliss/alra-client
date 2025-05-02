@@ -181,8 +181,7 @@ const Home = () => {
       <section className="alra-culture-section">
         <div className="alra-culture-container">
           <div className="alra-culture-heading">
-            <h2 className="alra-culture-title">Мы создаем новую культуру туризма</h2>
-            <h3 className="alra-culture-subtitle">и сервис высочайшего уровня</h3>
+            <h2 className="alra-culture-title">Мы создаем новую культуру туризма и сервис высочайшего уровня</h2>
           </div>
           
           <div className="alra-culture-content">

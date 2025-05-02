@@ -31,7 +31,6 @@ const Footer = () => {
     </button>
       <div className="alra-footer-container">
         <div className="alra-footer-top">
-        <div className="alra-footer-brand-links">
           <div className="alra-footer-brand">
             <div className="alra-footer-logo">
               <img src="https://i.postimg.cc/JnW3rTR9/Magic-Eraser-250403-143630-2.png" alt="Alra" className="alra-footer-tree-icon" />
@@ -92,7 +91,6 @@ const Footer = () => {
               )}
             </form>
           </div>
-        </div>
       </div>
       <div className="alra-footer-bottom-bg">
           <div className="alra-footer-bottom">

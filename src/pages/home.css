@@ -237,7 +237,7 @@
 }
 
 .alra-culture-container {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -792,18 +792,72 @@
 }
 
 @media (max-width: 768px) {
-  .alra-room-title {
+  
+  .alra-title {
+    font-size: 70px;
+  }
+  
+
+  .alra-subtitle {
+    font-size: 40px;
+  }
+
+  .alra-book-button {
+    padding: 15px 80px;
+    font-size: 1rem;
+    margin-left: 3%;
+  }
+
+  .alra-room-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+  }  
+
+  .alra-culture-title {
     font-size: 1.5rem;
   }
 
-  .alra-room-desc {
-    font-size: 1rem;
+
+  .alra-culture-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 1px;
   }
 
-.alra-book-room-button {
-  margin-top: 10px;
-  padding: 10px 50px;
-  font-size: 0.8rem;
-}
+  .alra-culture-section {
+    padding: 50px 0;
+  }
   
+  .alra-slider-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .alra-book-room-button {
+    margin-left: 50px;
+  }
+  .alra-room-desc {
+    margin-bottom: 3px;
+  }
+
+  .alra-location-content {
+    margin-bottom: 5px;
+  }
+
+  .alra-location-content {
+    margin-bottom: 5px;
+  }
+  
+  .alra-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+  }
 }

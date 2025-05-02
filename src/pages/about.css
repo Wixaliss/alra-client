@@ -361,6 +361,8 @@
 
   .alra-story-text {
     font-size: 1rem;
+    width: 96%;
+    margin: 0 auto;
   }
 
   .alra-story-title {

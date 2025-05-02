@@ -143,15 +143,6 @@
   font-weight: 300;
   letter-spacing: 2px;
 }
-.alra-footer-heading:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background-color: #414628;
-}
 
 .alra-footer-menu {
   list-style: none;
@@ -335,9 +326,7 @@
     gap: 30px;
   }
   
-  .alra-footer-column {
-    margin-left: -90px;
-  }
+  
   
   .alra-footer-bottom {
     flex-direction: column;
@@ -347,16 +336,47 @@
 
   .alra-footer-tagline {
     font-size: 0.9rem;
-    width: 40%;
+    width: 80%;
   }
-
-  .alra-footer-brand-links {
+  
+  .alra-footer-brand {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+  }
+  .alra-footer-logo {
     display: flex;
     flex-direction: row;
-    width: 85%;
+    align-items: center;
+    justify-content: center;
   }
 
+  .alra-footer-heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .alra-footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
+
+.alra-footer-newsletter {
+  margin-bottom: 60px;
+}
+
+.alra-contact-info {
+  color: #414628;
+  margin-right: 20px;
+}
+
+.alra-scroll-button {
+  margin-right: 10px;
+}
+
 }
 
 /* Smooth hover effect for all links */
@@ -366,7 +386,7 @@
 
 .alra-scroll-button {
   width: 40px;
-  margin-left: 95%;
+  margin-left: 90%;
   height: 40px;
   background-color: #414628;
   color: #fff;

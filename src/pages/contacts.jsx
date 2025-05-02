@@ -342,27 +342,7 @@ const Contacts = () => {
             </div>
           </div>
         </section>
-        
-        {/* Юридическая информация */}
-        <section className="contact-legal-section">
-          <div className="contact-section-container">
-            <div className="contact-legal-content">
-              <h3 className="contact-legal-title">Юридическая информация</h3>
-              <div className="contact-legal-details">
-                <p className="contact-legal-text">
-                  ООО "АЛРА Эко Вилладж" <br />
-                  ИНН: 1234567890 <br />
-                  ОГРН: 1234567890123 <br />
-                  Юридический адрес: Республика Абхазия, Кындыг, ул. Школьная
-                </p>
-                <div className="contact-legal-links">
-                  <Link to="/house-rules" className="contact-legal-link">Правила проживания</Link>
-                  <Link to="/booking-terms" className="contact-legal-link">Условия бронирования</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  
       </main>
       
       <Footer />
