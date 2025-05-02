@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -11,11 +10,9 @@ import 'leaflet/dist/leaflet.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeTab, setActiveTab] = useState('recreation');
+  const [activeTab] = useState('recreation');
   const [showServiceDetails, setShowServiceDetails] = useState(null);
-  const [activeTransport, setActiveTransport] = useState('car');
   const [copySuccess, setCopySuccess] = useState('');
-  const location = useLocation();
   
 
   const roomImages = [
@@ -26,13 +23,7 @@ const Home = () => {
     'https://i.postimg.cc/fT5RwZ4x/Frame-1496.png',
     'https://i.postimg.cc/QxNjYPBV/Frame-1494.png'
   ];
-  
 
-  const cultureImages = [
-    'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1566495392483-283daea73e47?q=80&w=1471&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop'
-  ];
   const position = [43.0071, 41.0153]; // Approximate coordinates for Abkhazia
   const activities = {
     recreation: [
@@ -62,63 +53,7 @@ const Home = () => {
       },
     ]
   };
-  
-  const nearbyAttractions = [
-    {
-      name: 'Горячие источники Кындыг',
-      distance: '0.5 км',
-      description: 'Природные термальные источники с целебными свойствами.',
-      image: 'https://images.unsplash.com/photo-1584515201197-43dc9dcba5e4?q=80&w=1587&auto=format&fit=crop'
-    },
-    {
-      name: 'Черное море',
-      distance: '2 км',
-      description: 'Прекрасные пляжи Черного моря с чистой водой и живописными бухтами.',
-      image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=1633&auto=format&fit=crop'
-    },
-    {
-      name: 'Национальный парк',
-      distance: '15 км',
-      description: 'Заповедная территория с уникальной флорой и фауной.',
-      image: 'https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=1471&auto=format&fit=crop'
-    }
-  ];
-  
-  const transportOptions = {
-    car: {
-      title: 'На автомобиле',
-      directions: [
-        'Из Сочи: двигайтесь по трассе E97/А-147 в сторону Абхазии',
-        'Пересеките границу на КПП "Псоу"',
-        'Продолжайте движение по основной дороге примерно 25 км',
-        'Поверните направо на указателе "Кындыг"',
-        'Через 3 км поверните налево на ул. Школьную'
-      ],
-      icon: '🚗',
-      duration: 'Около 1 часа 20 минут из Сочи'
-    },
-    bus: {
-      title: 'На общественном транспорте',
-      directions: [
-        'Сядьте на автобус Сочи-Сухум',
-        'Выйдите на остановке "Кындыг"',
-        'Пройдите пешком или возьмите такси до ул. Школьной (около 10 минут)'
-      ],
-      icon: '🚌',
-      duration: 'Около 2 часов из Сочи'
-    },
-    train: {
-      title: 'На поезде',
-      directions: [
-        'Доберитесь на поезде до ж/д вокзала Сухума',
-        'Возьмите такси или автобус до Кындыга',
-        'Следуйте указателям до ул. Школьной'
-      ],
-      icon: '🚂',
-      duration: 'Около 4 часов общего времени в пути'
-    }
-  };
-  
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === roomImages.length - 1 ? 0 : prev + 1));
   };
@@ -157,11 +92,6 @@ const Home = () => {
     ]
   };
   
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    setShowServiceDetails(null);
-  };
-  
   const toggleServiceDetails = (serviceId) => {
     if (showServiceDetails === serviceId) {
       setShowServiceDetails(null);
@@ -183,24 +113,6 @@ const Home = () => {
       });
   };
   
-  useEffect(() => {
-    // Имитация загрузки карты
-    const loadMapScript = () => {
-      const existingScript = document.getElementById('googleMapsScript');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
-        script.id = 'googleMapsScript';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-      }
-    };
-
-    // Раскомментируйте для реальной интеграции с Google Maps
-    // loadMapScript();
-  }, []);
-  
   return (
     <div className="alra-home-container">
       <div className="alra-background-overlay"></div>
@@ -211,7 +123,7 @@ const Home = () => {
         <div className="alra-branding">
           <div className="alra-logo">
             <img src="https://i.postimg.cc/kGzy2pyX/Magic-Eraser-250403-143630-1.png" alt="Alra" className="alra-tree-icon" />
-            <div class="alra-title-subtitle">
+            <div className="alra-title-subtitle">
             <h1 className="alra-title" style={{ fontFamily: 'cridea', letterSpacing: '1.5px' }}>ALRA</h1>
             <h2 className="alra-subtitle" style={{ fontFamily: 'masvol', letterSpacing: '1px', transform: 'scaleY(0.75)' }}>Eco Village</h2>
             </div>
@@ -326,7 +238,7 @@ const Home = () => {
                   >
                     <div className="alra-service-header">
                       <div className="alra-service-icon">
-                        <img src={service.icon} className="alra-service-icon-img" />
+                        <img src={service.icon} className="alra-service-icon-img" alt="iconImg" />
                       </div>
                       <h3 className="alra-service-title">{service.title}</h3>
                       <span className="alra-service-toggle">

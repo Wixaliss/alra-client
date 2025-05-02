@@ -65,14 +65,6 @@ const Contacts = () => {
     });
   };
 
-  const socialLinks = [
-    { name: 'Instagram', icon: '📸', url: 'https://instagram.com/alra_ecohotel' },
-    { name: 'Facebook', icon: '👍', url: 'https://facebook.com/alra_ecohotel' },
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/alra_ecohotel' },
-    { name: 'YouTube', icon: '📹', url: 'https://youtube.com/alra_ecohotel' },
-    { name: 'TripAdvisor', icon: '✈️', url: 'https://tripadvisor.com/alra_ecohotel' }
-  ];
-
   const testimonials = [
     {
       name: 'Мария К.',
@@ -135,7 +127,7 @@ const Contacts = () => {
           <div className="contact-section-container">
             <div className="contact-info-grid">
               <div className="contact-info-card">
-                <div class="contact-info-card-title-text">
+                <div className="contact-info-card-title-text">
                   <img src="https://i.postimg.cc/0QLHg0JH/ic-round-phone.png" alt="location" className="contact-info-icon" />
                   <h3 className="contact-info-title">Телефон</h3>
                 </div>
@@ -143,7 +135,7 @@ const Contacts = () => {
               </div>
               
               <div className="contact-info-card">
-                <div class="contact-info-card-title-text">
+                <div className="contact-info-card-title-text">
                   <img src="https://i.postimg.cc/x1DPRZy7/Group-2.png" alt="location" className="contact-info-icon" />
                   <h3 className="contact-info-title">Email</h3>
                 </div>
@@ -151,7 +143,7 @@ const Contacts = () => {
               </div>
               
               <div className="contact-info-card">
-              <div class="contact-info-card-title-text">
+              <div className="contact-info-card-title-text">
                 <img src="https://i.postimg.cc/DwK67NDh/Frame-1458.png" alt="location" className="contact-info-icon" />
                 <h3 className="contact-info-title">Адрес</h3>
               </div>

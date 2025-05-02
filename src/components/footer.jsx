@@ -31,11 +31,11 @@ const Footer = () => {
     </button>
       <div className="alra-footer-container">
         <div className="alra-footer-top">
-        <div class="alra-footer-brand-links">
+        <div className="alra-footer-brand-links">
           <div className="alra-footer-brand">
             <div className="alra-footer-logo">
               <img src="https://i.postimg.cc/JnW3rTR9/Magic-Eraser-250403-143630-2.png" alt="Alra" className="alra-footer-tree-icon" />
-              <div class="alra-footer-title-subtitle">
+              <div className="alra-footer-title-subtitle">
               <h1 className="alra-footer-title" style={{ fontFamily: 'cridea', letterSpacing: '1.5px' }}>ALRA</h1>
               <h2 className="alra-footer-subtitle" style={{ fontFamily: 'masvol', letterSpacing: '1px', transform: 'scaleY(0.75)' }}>Eco Village</h2>
           </div>
@@ -94,7 +94,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div class="alra-footer-bottom-bg">
+      <div className="alra-footer-bottom-bg">
           <div className="alra-footer-bottom">
             <div className="alra-footer-copyright">
               <p>&copy; {new Date().getFullYear()} ALRA Eco Village. Все права защищены.</p>

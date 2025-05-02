@@ -16,11 +16,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
-  
   return (
     <header className={`alra-header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="alra-navigation">

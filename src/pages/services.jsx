@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './services.css';
 
 const Services = () => {
-  const location = useLocation();
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
