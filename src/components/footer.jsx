@@ -45,7 +45,7 @@ const Footer = () => {
               где комфорт и природа сочетаются в гармонии.
             </p>
             <div className="alra-footer-social">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="alra-social-link">
+              <a href="https://www.instagram.com/alraecovillage/" target="_blank" rel="noopener noreferrer" className="alra-social-link">
                 <img src="https://i.postimg.cc/nh7gn51Y/Frame-1451.png" alt="location" className="alra-social-icon-inst" />
               </a>
               <a href="https://wa.me/79407179988" target="_blank" rel="noopener noreferrer" className="alra-social-link">
