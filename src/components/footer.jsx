@@ -22,12 +22,23 @@ const Footer = () => {
 
   return (
     <footer className="alra-footer">
+        <button 
+          className="alra-scroll-button" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Прокрутить наверх"
+        >
+      ⌃
+    </button>
       <div className="alra-footer-container">
         <div className="alra-footer-top">
+        <div class="alra-footer-brand-links">
           <div className="alra-footer-brand">
             <div className="alra-footer-logo">
-              <span className="alra-footer-logo-icon">&#127794;</span>
-              <h3 className="alra-footer-logo-text">ALRA <span>Eco Village</span></h3>
+              <img src="https://i.postimg.cc/JnW3rTR9/Magic-Eraser-250403-143630-2.png" alt="Alra" className="alra-footer-tree-icon" />
+              <div class="alra-footer-title-subtitle">
+              <h1 className="alra-footer-title" style={{ fontFamily: 'cridea', letterSpacing: '1.5px' }}>ALRA</h1>
+              <h2 className="alra-footer-subtitle" style={{ fontFamily: 'masvol', letterSpacing: '1px', transform: 'scaleY(0.75)' }}>Eco Village</h2>
+          </div>
             </div>
             <p className="alra-footer-tagline">
               Уникальный эко-отель в живописной Абхазии, 
@@ -35,16 +46,10 @@ const Footer = () => {
             </p>
             <div className="alra-footer-social">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="alra-social-link">
-                <span className="alra-social-icon">f</span>
+                <img src="https://i.postimg.cc/nh7gn51Y/Frame-1451.png" alt="location" className="alra-social-icon-inst" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="alra-social-link">
-                <span className="alra-social-icon">📸</span>
-              </a>
-              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="alra-social-link">
-                <span className="alra-social-icon">✈️</span>
-              </a>
-              <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="alra-social-link">
-                <span className="alra-social-icon">📱</span>
+              <a href="https://wa.me/79407179988" target="_blank" rel="noopener noreferrer" className="alra-social-link">
+                <img src="https://i.postimg.cc/vBS3rLzZ/Frame-1452.png" alt="location" className="alra-social-icon-wa" />
               </a>
             </div>
           </div>
@@ -55,48 +60,12 @@ const Footer = () => {
               <ul className="alra-footer-menu">
                 <li><Link to="/">Главная</Link></li>
                 <li><Link to="/about">О нас</Link></li>
-                <li><Link to="/rooms">Номера</Link></li>
                 <li><Link to="/services">Услуги</Link></li>
-                <li><Link to="/gallery">Галерея</Link></li>
                 <li><Link to="/contacts">Контакты</Link></li>
               </ul>
             </div>
-
-            <div className="alra-footer-column">
-              <h4 className="alra-footer-heading">Услуги</h4>
-              <ul className="alra-footer-menu">
-                <li><Link to="/services/restaurant">Эко-ресторан</Link></li>
-                <li><Link to="/services/sauna">Сауна и баня</Link></li>
-                <li><Link to="/services/yoga">Йога на природе</Link></li>
-                <li><Link to="/services/hiking">Треккинг</Link></li>
-                <li><Link to="/services/tours">Экскурсии</Link></li>
-                <li><Link to="/services/spa">Массаж и спа</Link></li>
-              </ul>
-            </div>
-
-            <div className="alra-footer-column">
-              <h4 className="alra-footer-heading">Контакты</h4>
-              <address className="alra-footer-contact">
-                <p>
-                  <span className="alra-contact-label">Адрес:</span>
-                  <span className="alra-contact-info">Республика Абхазия, Кындыг, ул. Школьная</span>
-                </p>
-                <p>
-                  <span className="alra-contact-label">Телефон:</span>
-                  <a href="tel:+79401234567" className="alra-contact-info">+7 (940) 123-45-67</a>
-                </p>
-                <p>
-                  <span className="alra-contact-label">Email:</span>
-                  <a href="mailto:info@alra-eco.com" className="alra-contact-info">info@alra-eco.com</a>
-                </p>
-                <p>
-                  <span className="alra-contact-label">Часы работы:</span>
-                  <span className="alra-contact-info">Ежедневно, 24/7</span>
-                </p>
-              </address>
-            </div>
           </div>
-
+          </div>
           <div className="alra-footer-newsletter">
             <h4 className="alra-footer-heading">Подпишитесь на новости</h4>
             <p className="alra-newsletter-desc">
@@ -124,22 +93,16 @@ const Footer = () => {
             </form>
           </div>
         </div>
-
-        <div className="alra-footer-bottom">
-          <div className="alra-footer-copyright">
-            <p>&copy; {new Date().getFullYear()} ALRA Eco Village. Все права защищены.</p>
-          </div>
-          <div className="alra-footer-legal">
-            <Link to="/privacy" className="alra-legal-link">Политика конфиденциальности</Link>
+      </div>
+      <div class="alra-footer-bottom-bg">
+          <div className="alra-footer-bottom">
+            <div className="alra-footer-copyright">
+              <p>&copy; {new Date().getFullYear()} ALRA Eco Village. Все права защищены.</p>
+            </div>
+              <Link to="/privacy" className="alra-legal-link">Политика конфиденциальности</Link>
             <Link to="/terms" className="alra-legal-link">Условия использования</Link>
           </div>
-          <div className="alra-footer-payment">
-            <span className="alra-payment-icon">💳</span>
-            <span className="alra-payment-icon">🏦</span>
-            <span className="alra-payment-icon">💵</span>
-          </div>
         </div>
-      </div>
     </footer>
   );
 };

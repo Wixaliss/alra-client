@@ -70,9 +70,9 @@
 }
 
 .terms-print-btn:hover {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
-  border-color: #0d3d29;
+  border-color: #414628;
 }
 
 .terms-print-icon {
@@ -101,7 +101,7 @@
 
 .terms-section-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -115,7 +115,7 @@
 
 .terms-subsection-title {
   font-size: 1.2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 25px 0 15px;
 }
 
@@ -140,7 +140,7 @@
 .terms-highlight p {
   font-size: 0.95rem;
   margin: 0;
-  color: #0d3d29;
+  color: #414628;
 }
 
 /* Table Styling */
@@ -159,7 +159,7 @@
 
 .terms-table th {
   background-color: #f2f7f2;
-  color: #0d3d29;
+  color: #414628;
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -184,7 +184,7 @@
 
 .terms-faq-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 30px;
   text-align: center;
 }
@@ -218,7 +218,7 @@
 .terms-faq-question h3 {
   font-size: 1.1rem;
   margin: 0;
-  color: #0d3d29;
+  color: #414628;
   font-weight: 600;
 }
 
@@ -257,7 +257,7 @@
 
 .terms-contact-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
   text-align: center;
 }
@@ -307,7 +307,7 @@
 
 .terms-contact-detail h3 {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 5px;
 }
 
@@ -326,7 +326,7 @@
 .terms-back-button {
   display: inline-flex;
   align-items: center;
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   text-decoration: none;
   padding: 12px 25px;
@@ -358,7 +358,7 @@
   }
   
   .terms-title {
-    color: #0d3d29;
+    color: #414628;
   }
   
   .terms-subtitle {

@@ -8,16 +8,11 @@
   background-color: #fcfcfc;
 }
 
-.contact-main {
-  padding-top: 80px;
-}
-
 /* Секция героя */
 .contact-hero {
   padding: 100px 0 60px;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(13, 61, 41, 0.8), rgba(13, 61, 41, 0.6)), 
-              url('https://images.unsplash.com/photo-1596452932476-7461adb96f9d?q=80&w=1470&auto=format&fit=crop');
+  background-color: #6d7255;
   background-size: cover;
   background-position: center;
   color: white;
@@ -31,7 +26,7 @@
 }
 
 .contact-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 20px;
 }
@@ -53,7 +48,7 @@
 
 .contact-section-title {
   font-size: 2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 30px;
   text-align: center;
 }
@@ -78,7 +73,15 @@
 /* Контактная информация */
 .contact-info-section {
   padding: 60px 0;
-  background-color: #f2f7f2;
+  background-color: #edefe8;
+}
+
+.contact-info-card-title-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
 }
 
 .contact-info-grid {
@@ -102,14 +105,14 @@
 }
 
 .contact-info-icon {
-  font-size: 2.5rem;
+  width: 8%;
   margin-bottom: 20px;
-  color: #74a12e;
+  color: #414628;
 }
 
 .contact-info-title {
   font-size: 1.3rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -132,9 +135,9 @@
 }
 
 .contact-copy-btn:hover {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
-  border-color: #0d3d29;
+  border-color: #414628;
 }
 
 /* Форма обратной связи */
@@ -202,7 +205,7 @@
 }
 
 .contact-form-button {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   border: none;
   border-radius: 5px;
@@ -214,7 +217,7 @@
 }
 
 .contact-form-button:hover {
-  background-color: #0a2e1f;
+  background-color: #2d301c;
   transform: translateY(-3px);
 }
 
@@ -232,7 +235,7 @@
 .contact-success-icon {
   width: 60px;
   height: 60px;
-  background-color: #74a12e;
+  background-color: #626550;
   color: white;
   display: flex;
   align-items: center;
@@ -244,7 +247,7 @@
 
 .contact-success-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -276,7 +279,7 @@
 .contact-directions-icon {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #74a12e;
+  color: #626550;
   display: inline-block;
   background-color: rgba(116, 161, 46, 0.1);
   width: 60px;
@@ -288,7 +291,7 @@
 
 .contact-directions-title {
   font-size: 1.3rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -321,7 +324,7 @@
 
 .contact-hours-title {
   font-size: 1.3rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 20px;
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -349,7 +352,7 @@
 }
 
 .contact-hours-time {
-  color: #74a12e;
+  color: #7f8a43;
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -364,7 +367,7 @@
 /* Сотрудничество */
 .contact-collab-section {
   padding: 60px 0;
-  background-color: #f2f7f2;
+  background-color: #edefe8;
 }
 
 .contact-collab-content {
@@ -403,19 +406,21 @@
 }
 
 .contact-collab-icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #74a12e;
+  width: 20%;
+}
+
+.contact-collab-icon-goods {
+  width: 15%;
 }
 
 .contact-collab-item-title {
   font-size: 1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0;
 }
 
 .contact-collab-button {
-  background-color: #74a12e;
+  background-color: #414628;
   color: white;
   border: none;
   border-radius: 5px;
@@ -429,7 +434,7 @@
 }
 
 .contact-collab-button:hover {
-  background-color: #5f8424;
+  background-color: #2d301c;
   transform: translateY(-3px);
 }
 
@@ -481,7 +486,7 @@
 }
 
 .contact-social-link:hover .contact-social-icon {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
 }
 
@@ -493,7 +498,7 @@
 /* Отзывы */
 .contact-testimonials-section {
   padding: 60px 0;
-  background-color: #f2f7f2;
+  background-color: #fafafa;
 }
 
 .contact-testimonials-grid {
@@ -536,7 +541,7 @@
 
 .contact-testimonial-name {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 5px;
 }
 
@@ -573,22 +578,25 @@
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
 .contact-legal-title {
   font-size: 1.2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
   width: 100%;
-  text-align: center;
+  text-align: start;
 }
 
 .contact-legal-details {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
   justify-content: space-between;
   gap: 20px;
 }
@@ -608,7 +616,7 @@
 
 .contact-legal-link {
   font-size: 0.85rem;
-  color: #0d3d29;
+  color: #414628;
   text-decoration: none;
   position: relative;
 }

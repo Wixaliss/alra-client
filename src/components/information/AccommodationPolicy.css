@@ -70,9 +70,9 @@
 }
 
 .policy-print-btn:hover {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
-  border-color: #0d3d29;
+  border-color: #414628;
 }
 
 .policy-print-icon {
@@ -111,7 +111,7 @@
   margin: 0 0 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
-  color: #0d3d29;
+  color: #414628;
 }
 
 .policy-toc-list {
@@ -156,7 +156,7 @@
 
 .policy-section-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -170,7 +170,7 @@
 
 .policy-subsection-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 25px 0 15px;
 }
 
@@ -203,7 +203,7 @@
 .policy-back-button {
   display: inline-flex;
   align-items: center;
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   text-decoration: none;
   padding: 12px 25px;
@@ -235,7 +235,7 @@
   }
   
   .policy-title {
-    color: #0d3d29;
+    color: #414628;
   }
   
   .policy-subtitle {

@@ -4,7 +4,7 @@
   height: 100vh;
   position: relative;
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Cridea', sans-serif;
 }
 
 /* Background image and overlay */
@@ -15,7 +15,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1586351012965-861464d0d80d?q=80&w=1742&auto=format&fit=crop');
+  background-image: url('https://i.postimg.cc/Vkd2dxBn/Frame-1502.png');
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -27,7 +27,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 20, 60, 0.4);
+  background-color: rgba(22, 22, 22, 0.7);
   z-index: -1;
 }
 
@@ -49,35 +49,47 @@
 
 .alra-logo {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.alra-title-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11%;
 }
 
 .alra-tree-icon {
-  font-size: 50px;
+  width: 17%;
 }
 
 .alra-title {
   font-size: 120px;
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
   letter-spacing: 8px;
 }
 
 .alra-subtitle {
-  font-size: 40px;
+  font-size: 70px;
   font-weight: 300;
-  margin: 0 0 50px 0;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .alra-book-button {
-  padding: 15px 60px;
-  font-size: 18px;
+  padding: 15px 118px;
+  font-size: 16px;
   background-color: transparent;
   color: white;
-  border: 2px solid white;
+  border: 1px solid rgb(188, 188, 188);
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 1px;
+  margin-left: 5%;
 }
 
 .alra-book-button:hover {
@@ -115,31 +127,57 @@
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 30px;
-  color: #333;
+  color: #414628;
 }
 
 .alra-room-desc {
   margin-bottom: 20px;
   line-height: 1.6;
-  font-size: 16px;
-  color: #555;
+  font-size: 20px;
+  color: #414628;
+  font-family: 'masvol';
+  letter-spacing: 1px;
+  transform: scaleY(0.8);
+  text-shadow: 0 0 1px currentColor;
+}
+
+.alra-service-icon-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
 }
 
 .alra-book-room-button {
   margin-top: 20px;
-  padding: 15px 40px;
+  padding: 12px 62px;
   font-size: 16px;
   background-color: transparent;
-  color: #333;
-  border: 1px solid #333;
+  color: #414628;
+  border: 1px solid #414628;
   cursor: pointer;
   transition: all 0.3s ease;
   width: fit-content;
 }
 
 .alra-book-room-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(22, 42, 22, 0.05);
 }
+
+.home-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.home-map-wrapper {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 .alra-room-slider {
   flex: 1;
@@ -165,7 +203,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(60, 63, 32, 0.4);
   border: none;
   width: 40px;
   height: 40px;
@@ -175,12 +213,12 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #333;
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
 .alra-slider-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(58, 74, 53, 0.9);
 }
 
 .alra-slider-prev {
@@ -213,14 +251,14 @@
 .alra-culture-title {
   font-size: 36px;
   font-weight: 400;
-  color: #333;
+  color: #414628;
   margin: 0;
 }
 
 .alra-culture-subtitle {
   font-size: 36px;
   font-weight: 400;
-  color: #333;
+  color: #414628;
   margin: 5px 0 0 0;
 }
 
@@ -236,9 +274,13 @@
 }
 
 .alra-culture-paragraph {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.6;
-  color: #555;
+  color: #414628;
+  font-family: 'masvol';
+  letter-spacing: 1px;
+  transform: scaleY(0.8);
+  text-shadow: 0 0 1px currentColor;
 }
 
 /* Slick slider styles */
@@ -292,7 +334,7 @@
 /* Activities and Services Section */
 .alra-activities-section {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #edefe8;
   padding: 80px 0;
 }
 
@@ -310,7 +352,7 @@
 .alra-activities-title {
   font-size: 36px;
   font-weight: 500;
-  color: #333;
+  color: #414628;
   margin-bottom: 15px;
 }
 
@@ -338,7 +380,7 @@
   border: none;
   padding: 15px 30px;
   font-size: 16px;
-  color: #666;
+  color: #414628;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -348,15 +390,15 @@
 }
 
 .alra-tab-icon {
-  font-size: 20px;
+  width: 20px;
 }
 
 .alra-tab-button:hover {
-  color: #333;
+  color: #414628;
 }
 
 .alra-tab-active {
-  color: #2e7d32;
+  color: #414628;
   font-weight: 500;
 }
 
@@ -367,13 +409,13 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #2e7d32;
+  background-color: #414628;
 }
 
 /* Services Grid */
 .alra-services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -406,14 +448,14 @@
 .alra-service-title {
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: #414628;
   margin: 0;
   flex: 1;
 }
 
 .alra-service-toggle {
   font-size: 22px;
-  color: #2e7d32;
+  color: #414628;
 }
 
 .alra-service-details {
@@ -445,9 +487,13 @@
 
 .alra-service-description {
   padding: 20px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
-  color: #555;
+  color: #414628;
+  font-family: 'masvol';
+  letter-spacing: 1px;
+  transform: scaleY(0.8);
+  text-shadow: 0 0 1px currentColor;
   margin: 0;
 }
 
@@ -455,7 +501,7 @@
   margin: 0 20px 20px;
   padding: 10px 20px;
   font-size: 14px;
-  background-color: #2e7d32;
+  background-color: #414628;
   color: white;
   border: none;
   border-radius: 4px;
@@ -464,12 +510,12 @@
 }
 
 .alra-service-button:hover {
-  background-color: #1b5e20;
+  background-color: #414628;;
 }
 
 /* Booking CTA */
 .alra-activities-cta {
-  background-color: #e8f5e9;
+  background-color: #e8ece8;
   padding: 40px;
   border-radius: 12px;
   text-align: center;
@@ -477,7 +523,7 @@
 
 .alra-activities-cta-text {
   font-size: 20px;
-  color: #333;
+  color: #414628;
   margin-bottom: 30px;
   font-weight: 500;
 }
@@ -505,7 +551,7 @@
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
-  color: #555;
+  color: #414628;
 }
 
 .alra-form-input,
@@ -521,7 +567,7 @@
 .alra-form-button {
   padding: 13px 30px;
   font-size: 16px;
-  background-color: #2e7d32;
+  background-color: #414628;
   color: white;
   border: none;
   border-radius: 4px;
@@ -531,7 +577,7 @@
 }
 
 .alra-form-button:hover {
-  background-color: #1b5e20;
+  background-color: #2a2e18;
 }
 
 /* Location Section */
@@ -568,6 +614,7 @@
 
 .alra-location-content {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 60px;
@@ -588,7 +635,7 @@
   height: 400px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(204, 205, 204, 0.1);
 }
 
 .alra-map-image {
@@ -655,7 +702,7 @@
 }
 
 .alra-address-icon {
-  font-size: 24px;
+  width: 3%;
   margin-right: 10px;
   color: #2e7d32;
 }
@@ -717,14 +764,15 @@
 
 .alra-copy-icon,
 .alra-directions-icon {
-  font-size: 16px;
+  width: 10%;
 }
 
 /* Contact Info */
 .alra-contact-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 25px;
+  margin-left: 2%;
 }
 
 .alra-contact-item {
@@ -734,8 +782,7 @@
 }
 
 .alra-contact-icon {
-  font-size: 18px;
-  color: #2e7d32;
+  width: 4%;
 }
 
 .alra-contact-text {
@@ -744,187 +791,19 @@
   margin: 0;
 }
 
-/* Transport Section */
-.alra-transport-container {
-  flex: 1;
-  min-width: 300px;
-}
+@media (max-width: 768px) {
+  .alra-room-title {
+    font-size: 1.5rem;
+  }
 
-.alra-transport-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 25px;
-}
+  .alra-room-desc {
+    font-size: 1rem;
+  }
 
-.alra-transport-tabs {
-  display: flex;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+.alra-book-room-button {
+  margin-top: 10px;
+  padding: 10px 50px;
+  font-size: 0.8rem;
 }
-
-.alra-transport-tab {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: none;
-  border: none;
-  font-size: 16px;
-  color: #666;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
+  
 }
-
-.alra-transport-icon {
-  font-size: 18px;
-}
-
-.alra-transport-tab:hover {
-  color: #333;
-}
-
-.alra-transport-active {
-  color: #2e7d32;
-  font-weight: 500;
-}
-
-.alra-transport-active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #2e7d32;
-}
-
-.alra-transport-content {
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.alra-transport-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.alra-transport-detail-icon {
-  font-size: 24px;
-}
-
-.alra-transport-detail-title {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  margin: 0;
-  flex: 1;
-}
-
-.alra-transport-duration {
-  font-size: 14px;
-  color: #666;
-  background-color: #e8f5e9;
-  padding: 4px 10px;
-  border-radius: 12px;
-}
-
-.alra-directions-list {
-  margin: 0;
-  padding-left: 25px;
-}
-
-.alra-direction-item {
-  margin-bottom: 12px;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.alra-direction-item:last-child {
-  margin-bottom: 0;
-}
-
-/* Nearby Attractions */
-.alra-nearby-attractions {
-  width: 100%;
-}
-
-.alra-attractions-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.alra-attractions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.alra-attraction-card {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.alra-attraction-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.alra-attraction-image-container {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.alra-attraction-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.alra-attraction-card:hover .alra-attraction-image {
-  transform: scale(1.05);
-}
-
-.alra-attraction-distance {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: rgba(46, 125, 50, 0.9);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 13px;
-}
-
-.alra-attraction-content {
-  padding: 20px;
-}
-
-.alra-attraction-name {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  margin: 0 0 10px 0;
-}
-
-.alra-attraction-description {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
-} 

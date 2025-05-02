@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './home.css';
+import 'leaflet/dist/leaflet.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,87 +17,49 @@ const Home = () => {
   const [copySuccess, setCopySuccess] = useState('');
   const location = useLocation();
   
+
   const roomImages = [
-    'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1470&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=1470&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1471&auto=format&fit=crop'
+    'https://i.postimg.cc/B6Q5ym4s/Frame-1499.png',
+    'https://i.postimg.cc/28FQkpym/Frame-1500.png',
+    'https://i.postimg.cc/t4vVJ9j0/Frame-1498.png',
+    'https://i.postimg.cc/C1tLjKKD/Frame-1497.png',
+    'https://i.postimg.cc/fT5RwZ4x/Frame-1496.png',
+    'https://i.postimg.cc/QxNjYPBV/Frame-1494.png'
   ];
   
+
   const cultureImages = [
     'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1566495392483-283daea73e47?q=80&w=1471&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop'
   ];
-  
+  const position = [43.0071, 41.0153]; // Approximate coordinates for Abkhazia
   const activities = {
     recreation: [
       {
         id: 'hiking',
-        title: 'Треккинг и пешие прогулки',
-        description: 'Маршруты разной сложности по живописным окрестностям и лесным тропам.',
-        icon: '🥾',
-        image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1470&auto=format&fit=crop'
+        title: 'Кухонная утварь',
+        description: 'Номер оборудован чайной станцией, холодильником, столовыми приборами.',
+        icon: 'https://i.postimg.cc/MG7bNGH8/Frame-1455.png',
       },
       {
         id: 'bbq',
-        title: 'Барбекю-зона',
-        description: 'Оборудованная зона для барбекю с дровами и всем необходимым инвентарем.',
-        icon: '🔥',
-        image: 'https://images.unsplash.com/photo-1555658636-6e4a36218be7?q=80&w=1470&auto=format&fit=crop'
+        title: 'Ванная комната',
+        description: 'Душевая кабина, c/e, фен, косметические средства..',
+        icon: 'https://i.postimg.cc/D0MqLJj1/Group.png',
       },
       {
         id: 'cycling',
-        title: 'Велопрогулки',
-        description: 'Аренда велосипедов и маршруты для велопрогулок разной сложности.',
-        icon: '🚲',
-        image: 'https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=1470&auto=format&fit=crop'
-      }
-    ],
-    wellness: [
+        title: 'WI-FI',
+        description: 'Во всех нкоттеджах уверенный сигнал скоростного Wi-fi.',
+        icon: 'https://i.postimg.cc/Vsp4VvWd/Frame-1457.png',
+      },
       {
         id: 'sauna',
-        title: 'Сауна и баня',
-        description: 'Традиционная русская баня и финская сауна с зоной отдыха.',
-        icon: '♨️',
-        image: 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?q=80&w=1576&auto=format&fit=crop'
+        title: 'Время заезда/выезда',
+        description: 'Заселение после 13:00 / Выезд до 12:00',
+        icon: 'https://i.postimg.cc/DwK67NDh/Frame-1458.png',
       },
-      {
-        id: 'yoga',
-        title: 'Йога на природе',
-        description: 'Утренние и вечерние занятия йогой на специальной площадке с видом на лес.',
-        icon: '🧘',
-        image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop'
-      },
-      {
-        id: 'massage',
-        title: 'Массаж и спа',
-        description: 'Различные виды массажа и спа-процедур для релаксации и оздоровления.',
-        icon: '💆',
-        image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1470&auto=format&fit=crop'
-      }
-    ],
-    food: [
-      {
-        id: 'restaurant',
-        title: 'Эко-ресторан',
-        description: 'Блюда из органических продуктов местного производства.',
-        icon: '🍽️',
-        image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop'
-      },
-      {
-        id: 'breakfast',
-        title: 'Завтрак из местных продуктов',
-        description: 'Свежие завтраки из экологически чистых продуктов с фермерских хозяйств.',
-        icon: '🍳',
-        image: 'https://images.unsplash.com/photo-1533089860892-a9b9ac6cd6b4?q=80&w=1470&auto=format&fit=crop'
-      },
-      {
-        id: 'picnic',
-        title: 'Пикник-корзины',
-        description: 'Возможность заказать корзину для пикника и насладиться трапезой на природе.',
-        icon: '🧺',
-        image: 'https://images.unsplash.com/photo-1526555197554-31c242e35f8b?q=80&w=1473&auto=format&fit=crop'
-      }
     ]
   };
   
@@ -246,10 +210,12 @@ const Home = () => {
       <main className="alra-main-content">
         <div className="alra-branding">
           <div className="alra-logo">
-            <span className="alra-tree-icon">&#127794;</span>
+            <img src="https://i.postimg.cc/kGzy2pyX/Magic-Eraser-250403-143630-1.png" alt="Alra" className="alra-tree-icon" />
+            <div class="alra-title-subtitle">
+            <h1 className="alra-title" style={{ fontFamily: 'cridea', letterSpacing: '1.5px' }}>ALRA</h1>
+            <h2 className="alra-subtitle" style={{ fontFamily: 'masvol', letterSpacing: '1px', transform: 'scaleY(0.75)' }}>Eco Village</h2>
+            </div>
           </div>
-          <h1 className="alra-title">ALRA</h1>
-          <h2 className="alra-subtitle">Eco Village</h2>
           <button className="alra-book-button">Забронировать</button>
         </div>
       </main>
@@ -324,19 +290,19 @@ const Home = () => {
           <div className="alra-slider-wrapper">
             <Slider {...sliderSettings} className="alra-culture-slider">
               <div className="alra-slick-slide">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop" alt="ALRA Eco Village" className="alra-slick-image" />
+                <img src="https://i.postimg.cc/43pz2nM6/IMG-6013.avif" alt="ALRA Eco Village" className="alra-slick-image" />
               </div>
               <div className="alra-slick-slide">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop" alt="ALRA Eco Village" className="alra-slick-image" />
+                <img src="https://i.postimg.cc/021V8RG2/IMG-6027.avif" alt="ALRA Eco Village" className="alra-slick-image" />
               </div>
               <div className="alra-slick-slide">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop" alt="ALRA Eco Village" className="alra-slick-image" />
+                <img src="https://i.postimg.cc/vTKMV8Gj/IMG-6015.avif" alt="ALRA Eco Village" className="alra-slick-image" />
               </div>
               <div className="alra-slick-slide">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop" alt="ALRA Eco Village" className="alra-slick-image" />
+                <img src="https://i.postimg.cc/sXRLHvF4/IMG-6011.avif" alt="ALRA Eco Village" className="alra-slick-image" />
               </div>
               <div className="alra-slick-slide">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop" alt="ALRA Eco Village" className="alra-slick-image" />
+                <img src="https://i.postimg.cc/sxj1c2dg/IMG-6030.avif" alt="ALRA Eco Village" className="alra-slick-image" />
               </div>
             </Slider>
           </div>
@@ -346,35 +312,10 @@ const Home = () => {
       <section className="alra-activities-section">
         <div className="alra-activities-container">
           <div className="alra-activities-heading">
-            <h2 className="alra-activities-title">Услуги и активности</h2>
-            <p className="alra-activities-subtitle">Откройте для себя множество возможностей для отдыха и релаксации</p>
+            <h2 className="alra-activities-title">В каждом номере</h2>
           </div>
           
           <div className="alra-tabs-container">
-            <div className="alra-tabs-header">
-              <button 
-                className={`alra-tab-button ${activeTab === 'recreation' ? 'alra-tab-active' : ''}`}
-                onClick={() => handleTabChange('recreation')}
-              >
-                <span className="alra-tab-icon">🌳</span>
-                Отдых на природе
-              </button>
-              <button 
-                className={`alra-tab-button ${activeTab === 'wellness' ? 'alra-tab-active' : ''}`}
-                onClick={() => handleTabChange('wellness')}
-              >
-                <span className="alra-tab-icon">💆</span>
-                Оздоровление
-              </button>
-              <button 
-                className={`alra-tab-button ${activeTab === 'food' ? 'alra-tab-active' : ''}`}
-                onClick={() => handleTabChange('food')}
-              >
-                <span className="alra-tab-icon">🍽️</span>
-                Питание
-              </button>
-            </div>
-            
             <div className="alra-tabs-content">
               <div className="alra-services-grid">
                 {activities[activeTab].map((service) => (
@@ -384,7 +325,9 @@ const Home = () => {
                     onClick={() => toggleServiceDetails(service.id)}
                   >
                     <div className="alra-service-header">
-                      <span className="alra-service-icon">{service.icon}</span>
+                      <div className="alra-service-icon">
+                        <img src={service.icon} className="alra-service-icon-img" />
+                      </div>
                       <h3 className="alra-service-title">{service.title}</h3>
                       <span className="alra-service-toggle">
                         {showServiceDetails === service.id ? '−' : '+'}
@@ -392,11 +335,7 @@ const Home = () => {
                     </div>
                     
                     <div className="alra-service-details">
-                      <div className="alra-service-image-container">
-                        <img src={service.image} alt={service.title} className="alra-service-image" />
-                      </div>
                       <p className="alra-service-description">{service.description}</p>
-                      <button className="alra-service-button">Подробнее</button>
                     </div>
                   </div>
                 ))}
@@ -442,28 +381,39 @@ const Home = () => {
           <div className="alra-location-content">
             <div className="alra-location-map-container">
               <div className="alra-map-placeholder">
-                {/* Здесь будет интегрирована реальная карта Google или Yandex Maps */}
-                <img 
-                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?q=80&w=1631&auto=format&fit=crop" 
-                  alt="Карта местоположения" 
-                  className="alra-map-image" 
-                />
+                          <div className="home-section-container">
+                            <div className="home-map-wrapper">
+                              <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="contact-map">
+                                <TileLayer
+                                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                />
+                                <Marker position={position}>
+                                  <Popup>
+                                    ALRA Eco Village <br /> Добро пожаловать!
+                                  </Popup>
+                                </Marker>
+                              </MapContainer>
+                            </div>
+                          </div>
                 <div className="alra-map-pin">
                   <span className="alra-map-pin-icon">📍</span>
                   <span className="alra-map-pin-pulse"></span>
                 </div>
               </div>
               
-              <div className="alra-location-address">
+              
+            </div>
+            <div className="alra-location-address">
                 <div className="alra-address-card">
                   <div className="alra-address-header">
-                    <span className="alra-address-icon">📍</span>
+                    <img src="https://i.postimg.cc/7bvZF0KH/Frame-1450-3.png" alt="location" className="alra-address-icon" />
                     <h3 className="alra-address-title">Наш адрес</h3>
                   </div>
                   <p className="alra-address-text">Республика Абхазия, Кындыг, ул. Школьная</p>
                   <div className="alra-address-actions">
                     <button className="alra-address-copy" onClick={copyAddressToClipboard}>
-                      <span className="alra-copy-icon">📋</span>
+                    <img src="https://i.postimg.cc/wjgwzPyN/solar-copy-bold.png" alt="location" className="alra-copy-icon" />
                       Скопировать адрес
                     </button>
                     {copySuccess && <span className="alra-copy-success">{copySuccess}</span>}
@@ -471,7 +421,7 @@ const Home = () => {
                        target="_blank" 
                        rel="noopener noreferrer" 
                        className="alra-address-directions">
-                      <span className="alra-directions-icon">🧭</span>
+                       <img src="https://i.postimg.cc/zBbjpYMs/tabler-location-filled.png" alt="location" className="alra-directions-icon" />
                       Построить маршрут
                     </a>
                   </div>
@@ -479,83 +429,19 @@ const Home = () => {
                 
                 <div className="alra-contact-info">
                   <div className="alra-contact-item">
-                    <span className="alra-contact-icon">📱</span>
+                  <img src="https://i.postimg.cc/0QLHg0JH/ic-round-phone.png" alt="location" className="alra-contact-icon" />
                     <p className="alra-contact-text">+7 (940) 123-45-67</p>
                   </div>
                   <div className="alra-contact-item">
-                    <span className="alra-contact-icon">✉️</span>
+                  <img src="https://i.postimg.cc/x1DPRZy7/Group-2.png" alt="location" className="alra-contact-icon" />
                     <p className="alra-contact-text">info@alra-eco.com</p>
                   </div>
                   <div className="alra-contact-item">
-                    <span className="alra-contact-icon">⏰</span>
+                  <img src="https://i.postimg.cc/DwK67NDh/Frame-1458.png" alt="location" className="alra-contact-icon" />
                     <p className="alra-contact-text">Заезд с 14:00, выезд до 12:00</p>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="alra-transport-container">
-              <h3 className="alra-transport-title">Как добраться</h3>
-              
-              <div className="alra-transport-tabs">
-                <button 
-                  className={`alra-transport-tab ${activeTransport === 'car' ? 'alra-transport-active' : ''}`}
-                  onClick={() => setActiveTransport('car')}
-                >
-                  <span className="alra-transport-icon">🚗</span>
-                  На автомобиле
-                </button>
-                <button 
-                  className={`alra-transport-tab ${activeTransport === 'bus' ? 'alra-transport-active' : ''}`}
-                  onClick={() => setActiveTransport('bus')}
-                >
-                  <span className="alra-transport-icon">🚌</span>
-                  На автобусе
-                </button>
-                <button 
-                  className={`alra-transport-tab ${activeTransport === 'train' ? 'alra-transport-active' : ''}`}
-                  onClick={() => setActiveTransport('train')}
-                >
-                  <span className="alra-transport-icon">🚂</span>
-                  На поезде
-                </button>
-              </div>
-              
-              <div className="alra-transport-content">
-                <div className="alra-transport-details">
-                  <div className="alra-transport-header">
-                    <span className="alra-transport-detail-icon">{transportOptions[activeTransport].icon}</span>
-                    <h4 className="alra-transport-detail-title">{transportOptions[activeTransport].title}</h4>
-                    <span className="alra-transport-duration">{transportOptions[activeTransport].duration}</span>
-                  </div>
-                  
-                  <ol className="alra-directions-list">
-                    {transportOptions[activeTransport].directions.map((direction, index) => (
-                      <li key={index} className="alra-direction-item">{direction}</li>
-                    ))}
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="alra-nearby-attractions">
-            <h3 className="alra-attractions-title">Что посмотреть рядом</h3>
-            
-            <div className="alra-attractions-grid">
-              {nearbyAttractions.map((attraction, index) => (
-                <div key={index} className="alra-attraction-card">
-                  <div className="alra-attraction-image-container">
-                    <img src={attraction.image} alt={attraction.name} className="alra-attraction-image" />
-                    <span className="alra-attraction-distance">{attraction.distance}</span>
-                  </div>
-                  <div className="alra-attraction-content">
-                    <h4 className="alra-attraction-name">{attraction.name}</h4>
-                    <p className="alra-attraction-description">{attraction.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

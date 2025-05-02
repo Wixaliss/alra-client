@@ -70,9 +70,9 @@
 }
 
 .rules-print-btn:hover {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
-  border-color: #0d3d29;
+  border-color: #414628;
 }
 
 .rules-print-icon {
@@ -111,9 +111,9 @@
 }
 
 .rules-tab-active {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
-  border-color: #0d3d29;
+  border-color: #414628;
 }
 
 .rules-tab-content {
@@ -135,7 +135,7 @@
 
 .rules-section-title {
   font-size: 1.8rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -169,7 +169,7 @@
 
 .rules-card-title {
   font-size: 1.2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -224,7 +224,7 @@
 .rules-process-step {
   width: 40px;
   height: 40px;
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@
 
 .rules-process-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 10px;
 }
 
@@ -270,7 +270,7 @@
 
 .rules-grid-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -297,7 +297,7 @@
 
 .rules-note-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 10px;
 }
 
@@ -337,7 +337,7 @@
 
 .rules-facility-title {
   font-size: 1.2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -390,7 +390,7 @@
 
 .rules-eco-title {
   font-size: 1.2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -418,7 +418,7 @@
 
 .rules-eco-certificate-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 10px;
 }
 
@@ -446,7 +446,7 @@
 
 .rules-security-title {
   font-size: 1.1rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -519,7 +519,7 @@
 .rules-back-button {
   display: inline-flex;
   align-items: center;
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   text-decoration: none;
   padding: 12px 25px;
@@ -551,7 +551,7 @@
   }
   
   .rules-title {
-    color: #0d3d29;
+    color: #414628;
   }
   
   .rules-subtitle {

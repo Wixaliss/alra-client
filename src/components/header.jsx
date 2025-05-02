@@ -1,36 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 150);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   
   return (
-    <header className="alra-header">
+    <header className={`alra-header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="alra-navigation">
-        <ul className="alra-nav-list">
+
+        <ul className={`alra-nav-list ${isMenuOpen ? 'open' : ''}`}>
           <li className="alra-nav-item">
-            <Link to="/" className={location.pathname === '/' ? 'alra-active' : ''}>
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className={location.pathname === '/' ? 'alra-active' : ''}>
               Главная
             </Link>
           </li>
           <li className="alra-nav-item">
-            <Link to="/about" className={location.pathname === '/about' ? 'alra-active' : ''}>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} className={location.pathname === '/about' ? 'alra-active' : ''}>
               О нас
             </Link>
           </li>
           <li className="alra-nav-item">
-            <Link to="/services" className={location.pathname === '/services' ? 'alra-active' : ''}>
+            <Link to="/services" onClick={() => setIsMenuOpen(false)} className={location.pathname === '/services' ? 'alra-active' : ''}>
               Услуги
             </Link>
           </li>
           <li className="alra-nav-item">
-            <Link to="/contacts" className={location.pathname === '/contacts' ? 'alra-active' : ''}>
+            <Link to="/contacts" onClick={() => setIsMenuOpen(false)} className={location.pathname === '/contacts' ? 'alra-active' : ''}>
               Контакты
             </Link>
           </li>
           <li className="alra-nav-item alra-nav-book">
-            <Link to="/book">
+            <Link to="/book" onClick={() => setIsMenuOpen(false)}>
               Забронировать
             </Link>
           </li>
@@ -40,4 +57,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

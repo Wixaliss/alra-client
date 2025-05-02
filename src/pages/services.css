@@ -4,20 +4,15 @@
   position: relative;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  color: #333;
+  color: #414628;
   background-color: #fcfcfc;
-}
-
-.alra-services-main {
-  padding-top: 80px;
 }
 
 /* Секция героя */
 .alra-services-hero {
   padding: 100px 0 60px;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(13, 61, 41, 0.8), rgba(13, 61, 41, 0.6)), 
-              url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop');
+  background: url('https://i.postimg.cc/fRLW4QpJ/Frame-1506.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -32,16 +27,18 @@
 
 .alra-services-title {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 0 20px;
+  text-shadow: 0 0 10px #2c2c2c;
 }
 
 .alra-services-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 0 10px #000000;
 }
 
 /* Интро секция */
@@ -96,7 +93,7 @@
 }
 
 .alra-service-active .alra-service-category-header {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
 }
 
@@ -118,8 +115,8 @@
 
 .alra-service-category-title {
   flex: 1;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -144,7 +141,8 @@
 }
 
 .alra-service-items {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
   padding: 30px;
@@ -190,10 +188,10 @@
 }
 
 .alra-service-item-title {
-  font-size: 1.2rem;
-  color: #0d3d29;
+  font-size: 1rem;
+  color: #414628;
   margin: 0 0 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .alra-service-item-desc {
@@ -215,7 +213,7 @@
 /* Бронирование услуг */
 .alra-booking-section {
   padding: 80px 0;
-  background-color: #f2f7f2;
+  background-color: #edefe8;;
 }
 
 .alra-booking-container {
@@ -226,7 +224,7 @@
 
 .alra-booking-title {
   font-size: 2rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
   text-align: center;
 }
@@ -298,7 +296,7 @@
 }
 
 .alra-form-button {
-  background-color: #0d3d29;
+  background-color: #414628;
   color: white;
   border: none;
   border-radius: 5px;
@@ -310,7 +308,7 @@
 }
 
 .alra-form-button:hover {
-  background-color: #0a2e1f;
+  background-color: #2a2e18;
   transform: translateY(-3px);
 }
 
@@ -338,7 +336,7 @@
 
 .alra-success-title {
   font-size: 1.5rem;
-  color: #0d3d29;
+  color: #414628;
   margin: 0 0 15px;
 }
 
@@ -385,6 +383,7 @@
   
   .alra-service-category-title {
     font-size: 1.2rem;
+    color: #414628;
   }
   
   .alra-booking-form {
@@ -401,3 +400,4 @@
     padding: 15px 20px;
   }
 } 
+

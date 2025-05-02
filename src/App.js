@@ -8,6 +8,8 @@ import Contacts from './pages/contacts';
 import AccommodationPolicy from './components/information/AccommodationPolicy';
 import HouseRules from './components/information/HouseRules';
 import BookingTerms from './components/information/BookingTerms';
+import '../src/components/fonts.css';
+
 
 function App() {
   return (

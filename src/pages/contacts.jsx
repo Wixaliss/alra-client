@@ -75,22 +75,22 @@ const Contacts = () => {
 
   const testimonials = [
     {
-      name: 'Мария Иванова',
-      photo: 'https://randomuser.me/api/portraits/women/65.jpg',
-      text: 'Прекрасное место для отдыха от городской суеты. Чистый воздух, вкусная еда и невероятная природа. Рекомендую всем, кто хочет перезагрузиться!',
+      name: 'Мария К.',
+      photo: 'https://i.postimg.cc/65nXZ5Rs/kqajk0xyhm84fywysrhbzmpvfqylih2q.png',
+      text: 'Потрясающее место для отдыха! В Абхазии уже второй раз, хочется возвращаться снова и снова. В этот раз решили остановаиться в Алра. Чистый воздух, уютные домики, вкусная еда и дружелюбный персонал. Провели неделю и обязательно вернемся в будущем.',
       rating: 5
     },
     {
-      name: 'Алексей Петров',
-      photo: 'https://randomuser.me/api/portraits/men/32.jpg',
-      text: 'Отличный сервис и внимательный персонал. Особенно понравились экскурсии и мастер-классы. Обязательно вернемся снова!',
+      name: 'Сергей Д.',
+      photo: 'https://i.postimg.cc/HkmC9D4r/1678385566.jpg',
+      text: 'Это место изменило мое представление об экологичном отдыхе. Всё продумано до мелочей: от органических средств для душа до велосипедов для передвижения. Особенно запомнились вечера у костра.',
       rating: 5
     },
     {
-      name: 'Елена Смирнова',
-      photo: 'https://randomuser.me/api/portraits/women/44.jpg',
-      text: 'Потрясающее место с уникальной атмосферой. Отдельное спасибо за эко-подход ко всему и бережное отношение к природе.',
-      rating: 4
+      name: 'Анна',
+      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop',
+      text: 'Уже второй раз приезжаем в ALRA, и каждый раз открываем для себя что-то новое. Идеальное место для перезагрузки от городской суеты. Хочу отменить классное расположение домиков и отдельное спасибо за вкуснейшие завтраки!',
+      rating: 5
     }
   ];
 
@@ -135,25 +135,29 @@ const Contacts = () => {
           <div className="contact-section-container">
             <div className="contact-info-grid">
               <div className="contact-info-card">
-                <div className="contact-info-icon">📞</div>
-                <h3 className="contact-info-title">Телефон</h3>
-                <p className="contact-info-text">+7 (940) 123-45-67</p>
-                <p className="contact-info-text">+7 (940) 765-43-21</p>
+                <div class="contact-info-card-title-text">
+                  <img src="https://i.postimg.cc/0QLHg0JH/ic-round-phone.png" alt="location" className="contact-info-icon" />
+                  <h3 className="contact-info-title">Телефон</h3>
+                </div>
+                <p className="contact-info-text">+7 (940) 717-99-88</p>
               </div>
               
               <div className="contact-info-card">
-                <div className="contact-info-icon">✉️</div>
-                <h3 className="contact-info-title">Email</h3>
+                <div class="contact-info-card-title-text">
+                  <img src="https://i.postimg.cc/x1DPRZy7/Group-2.png" alt="location" className="contact-info-icon" />
+                  <h3 className="contact-info-title">Email</h3>
+                </div>
                 <p className="contact-info-text">info@alra-eco.com</p>
-                <p className="contact-info-text">booking@alra-eco.com</p>
               </div>
               
               <div className="contact-info-card">
-                <div className="contact-info-icon">📍</div>
+              <div class="contact-info-card-title-text">
+                <img src="https://i.postimg.cc/DwK67NDh/Frame-1458.png" alt="location" className="contact-info-icon" />
                 <h3 className="contact-info-title">Адрес</h3>
+              </div>
                 <p className="contact-info-text" ref={addressRef}>
-                  Абхазия, г. Сухум, <br />
-                  ул. Приморская, 123
+                  Республика Абхазия, Кындыг, <br />
+                  ул. Школьная
                 </p>
                 <button 
                   className="contact-copy-btn" 
@@ -238,44 +242,6 @@ const Contacts = () => {
           </div>
         </section>
         
-        {/* Как добраться */}
-        <section className="contact-directions-section">
-          <div className="contact-section-container">
-            <h2 className="contact-section-title">Как добраться</h2>
-            <div className="contact-directions-grid">
-              <div className="contact-directions-card">
-                <div className="contact-directions-icon">✈️</div>
-                <h3 className="contact-directions-title">На самолете</h3>
-                <p className="contact-directions-text">
-                  Ближайший аэропорт находится в г. Сочи. От аэропорта до границы с Абхазией 
-                  можно добраться на такси или автобусе. Мы можем организовать трансфер от границы 
-                  до нашего отеля (оплачивается дополнительно).
-                </p>
-              </div>
-              
-              <div className="contact-directions-card">
-                <div className="contact-directions-icon">🚗</div>
-                <h3 className="contact-directions-title">На автомобиле</h3>
-                <p className="contact-directions-text">
-                  Если вы путешествуете на своем автомобиле, вы можете пересечь границу 
-                  на КПП "Псоу" и следовать по указателям в сторону Сухума. После въезда 
-                  в город поверните на ул. Приморскую и следуйте до номера 123.
-                </p>
-              </div>
-              
-              <div className="contact-directions-card">
-                <div className="contact-directions-icon">🚂</div>
-                <h3 className="contact-directions-title">На поезде</h3>
-                <p className="contact-directions-text">
-                  До Абхазии можно добраться на поезде Москва-Сухум или Санкт-Петербург-Сухум. 
-                  От железнодорожного вокзала в Сухуме до отеля можно доехать на такси 
-                  (примерно 10-15 минут).
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
         {/* Часы работы и заселения */}
         <section className="contact-hours-section">
           <div className="contact-section-container">
@@ -314,15 +280,7 @@ const Contacts = () => {
                 <ul className="contact-hours-list">
                   <li className="contact-hours-item">
                     <span className="contact-hours-day">Завтрак</span>
-                    <span className="contact-hours-time">07:00 - 10:00</span>
-                  </li>
-                  <li className="contact-hours-item">
-                    <span className="contact-hours-day">Обед</span>
-                    <span className="contact-hours-time">12:30 - 15:00</span>
-                  </li>
-                  <li className="contact-hours-item">
-                    <span className="contact-hours-day">Ужин</span>
-                    <span className="contact-hours-time">18:00 - 22:00</span>
+                    <span className="contact-hours-time">08:00 - 10:00</span>
                   </li>
                 </ul>
               </div>
@@ -342,19 +300,19 @@ const Contacts = () => {
               </p>
               <div className="contact-collab-options">
                 <div className="contact-collab-item">
-                  <div className="contact-collab-icon">🤝</div>
+                <img src="https://i.postimg.cc/PxV75kvJ/material-symbols-handshake.png" alt="location" className="contact-collab-icon" />
                   <h4 className="contact-collab-item-title">Туристические агентства</h4>
                 </div>
                 <div className="contact-collab-item">
-                  <div className="contact-collab-icon">📱</div>
+                <img src="https://i.postimg.cc/NFWPR74w/fluent-phone-16-regular.png" alt="location" className="contact-collab-icon" />
                   <h4 className="contact-collab-item-title">Блогеры и инфлюенсеры</h4>
                 </div>
                 <div className="contact-collab-item">
-                  <div className="contact-collab-icon">🍽️</div>
+                <img src="https://i.postimg.cc/MG7bNGH8/Frame-1455.png" alt="location" className="contact-collab-icon-goods" />
                   <h4 className="contact-collab-item-title">Поставщики продуктов</h4>
                 </div>
                 <div className="contact-collab-item">
-                  <div className="contact-collab-icon">🎁</div>
+                <img src="https://i.postimg.cc/0j6B6H7f/prime-gift.png" alt="location" className="contact-collab-icon" />
                   <h4 className="contact-collab-item-title">Производители сувениров</h4>
                 </div>
               </div>
@@ -364,30 +322,7 @@ const Contacts = () => {
             </div>
           </div>
         </section>
-        
-        {/* Блок "Найдите нас в соцсетях" */}
-        <section className="contact-social-section">
-          <div className="contact-section-container">
-            <h2 className="contact-section-title">Найдите нас в соцсетях</h2>
-            <p className="contact-social-subtitle">
-              Подписывайтесь на наши аккаунты, чтобы быть в курсе новостей, акций и мероприятий ALRA Eco Village
-            </p>
-            <div className="contact-social-links">
-              {socialLinks.map((social, index) => (
-                <a 
-                  key={index}
-                  href={social.url} 
-                  className="contact-social-link" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <span className="contact-social-icon">{social.icon}</span>
-                  <span className="contact-social-name">{social.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+
         
         {/* Отзывы или сообщения от гостей */}
         <section className="contact-testimonials-section">
@@ -426,10 +361,9 @@ const Contacts = () => {
                   ООО "АЛРА Эко Вилладж" <br />
                   ИНН: 1234567890 <br />
                   ОГРН: 1234567890123 <br />
-                  Юридический адрес: Республика Абхазия, г. Сухум, ул. Приморская, 123
+                  Юридический адрес: Республика Абхазия, Кындыг, ул. Школьная
                 </p>
                 <div className="contact-legal-links">
-                  <Link to="/privacy-policy" className="contact-legal-link">Политика конфиденциальности</Link>
                   <Link to="/house-rules" className="contact-legal-link">Правила проживания</Link>
                   <Link to="/booking-terms" className="contact-legal-link">Условия бронирования</Link>
                 </div>

@@ -1,7 +1,7 @@
 .alra-footer {
-  background-color: #0d3d29;
+  background-color: #edefe8;
   color: #fff;
-  padding: 60px 0 20px;
+
   font-family: 'Montserrat', sans-serif;
   position: relative;
 }
@@ -16,23 +16,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
   gap: 30px;
 }
 
+.alra-footer-brand-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
 .alra-footer-brand {
   flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;  
+  align-items: start;
 }
 
 .alra-footer-logo {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: start;
   margin-bottom: 15px;
 }
 
 .alra-footer-logo-icon {
-  font-size: 2rem;
-  margin-right: 10px;
+  width: 30%;
 }
 
 .alra-footer-logo-text {
@@ -53,7 +66,7 @@
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #414628;
 }
 
 .alra-footer-social {
@@ -64,7 +77,7 @@
 .alra-social-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -72,23 +85,19 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.alra-social-link:hover {
-  background-color: #74a12e;
-  transform: translateY(-3px);
+.alra-social-icon-inst {
+  width: 70%;
 }
 
-.alra-social-icon {
-  font-size: 1.2rem;
+.alra-social-icon-wa {
+  width: 60%;
 }
 
 .alra-footer-links {
   display: flex;
   flex-wrap: wrap;
+  
   gap: 40px;
-}
-
-.alra-footer-column {
-  flex: 0 0 180px;
 }
 
 .alra-footer-heading {
@@ -97,8 +106,43 @@
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
+  color: #414628;
 }
 
+.alra-footer-logo {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.alra-footer-title-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11%;
+  color: #414628;
+}
+
+.alra-footer-tree-icon {
+  width: 15%;
+  margin-left: -1%;
+}
+
+.alra-footer-title {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 8px;
+}
+
+.alra-footer-subtitle {
+  font-size: 29px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
 .alra-footer-heading:after {
   content: '';
   position: absolute;
@@ -106,7 +150,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #74a12e;
+  background-color: #414628;
 }
 
 .alra-footer-menu {
@@ -120,7 +164,7 @@
 }
 
 .alra-footer-menu li a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #414628;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s, padding-left 0.3s;
@@ -128,7 +172,7 @@
 }
 
 .alra-footer-menu li a:hover {
-  color: #fff;
+  color: #414628;
   padding-left: 5px;
 }
 
@@ -142,15 +186,15 @@
 .alra-contact-label {
   font-weight: 600;
   margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #414628;
 }
 
 .alra-contact-info {
-  color: rgba(255, 255, 255, 0.8);
+  color: #414628;
 }
 
 .alra-footer-contact a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #414628;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -166,7 +210,7 @@
 .alra-newsletter-desc {
   font-size: 0.9rem;
   margin-bottom: 15px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #414628;
   line-height: 1.6;
 }
 
@@ -179,19 +223,19 @@
   padding: 14px;
   border: none;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: rgba(137, 150, 137, 0.2);
+  color: #414628;
   font-size: 0.9rem;
   transition: background-color 0.3s;
 }
 
 .alra-newsletter-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(48, 65, 50, 0.5);
 }
 
 .alra-newsletter-input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(88, 102, 88, 0.2);
 }
 
 .alra-newsletter-button {
@@ -199,7 +243,7 @@
   right: 5px;
   top: 5px;
   padding: 9px 15px;
-  background-color: #74a12e;
+  background-color: #414628;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -209,7 +253,7 @@
 }
 
 .alra-newsletter-button:hover {
-  background-color: #8cb840;
+  background-color: #1a1d10;
 }
 
 .alra-newsletter-success {
@@ -224,15 +268,22 @@
   margin-top: 8px;
 }
 
+.alra-footer-bottom-bg {
+  background: #414628;
+  width: 100%;
+}
+
 .alra-footer-bottom {
-  padding-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
-  gap: 15px;
+  font-size: 0.7rem;
+
 }
 
 .alra-footer-copyright p {
@@ -249,20 +300,13 @@
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.3s;
+  margin-right: 2%;
 }
 
 .alra-legal-link:hover {
   color: #fff;
 }
 
-.alra-footer-payment {
-  display: flex;
-  gap: 10px;
-}
-
-.alra-payment-icon {
-  font-size: 1.2rem;
-}
 
 @media (max-width: 992px) {
   .alra-footer-top {
@@ -292,13 +336,27 @@
   }
   
   .alra-footer-column {
-    flex: 0 0 100%;
+    margin-left: -90px;
   }
   
   .alra-footer-bottom {
     flex-direction: column;
     text-align: center;
   }
+
+
+  .alra-footer-tagline {
+    font-size: 0.9rem;
+    width: 40%;
+  }
+
+  .alra-footer-brand-links {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+  }
+
+  
 }
 
 /* Smooth hover effect for all links */
@@ -306,17 +364,15 @@
   transition: all 0.3s ease;
 }
 
-/* Subtle scroll top button */
-.alra-footer::before {
-  content: '⌃';
-  position: absolute;
-  top: -20px;
-  right: 20px;
+.alra-scroll-button {
   width: 40px;
+  margin-left: 95%;
   height: 40px;
-  background-color: #74a12e;
+  background-color: #414628;
   color: #fff;
   border-radius: 50%;
+  border: none;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,6 +382,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.alra-footer::before:hover {
+.alra-scroll-button:hover {
   transform: translateY(-5px);
 } 
