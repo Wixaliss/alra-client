@@ -568,32 +568,66 @@
 }
 
 /* Адаптивность */
+@media (max-width: 1200px) {
+  .contact-section-container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  
+  .contact-map-wrapper {
+    height: 350px;
+  }
+  
+  .contact-form {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 992px) {
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .contact-collab-options {
-    gap: 15px;
+    flex-wrap: wrap;
   }
   
   .contact-collab-item {
-    flex: 0 0 180px;
+    flex: 0 0 48%;
   }
   
   .contact-legal-details {
     flex-direction: column;
-    text-align: center;
   }
   
   .contact-legal-links {
-    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .contact-directions-grid,
+  .contact-hours-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form-section,
+  .contact-info-section,
+  .contact-map-section,
+  .contact-directions-section,
+  .contact-hours-section,
+  .contact-collab-section,
+  .contact-social-section,
+  .contact-testimonials-section {
+    padding: 50px 0;
   }
 }
 
 @media (max-width: 768px) {
   .contact-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   
   .contact-subtitle {
@@ -606,67 +640,166 @@
   
   .contact-form-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .contact-form-full {
-    grid-column: span 1;
+    grid-column: 1;
   }
   
   .contact-section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
   }
   
   .contact-form {
-    padding: 30px 20px;
+    padding: 25px;
   }
   
   .contact-collab-options {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
   
   .contact-collab-item {
+    flex: 0 0 100%;
     width: 100%;
-    max-width: 300px;
-    flex: none;
   }
   
   .contact-social-links {
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .contact-social-link {
-    width: 100px;
+    padding: 15px;
   }
   
   .contact-social-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-card {
+    padding: 20px;
+  }
+  
+  .contact-directions-grid,
+  .contact-hours-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contact-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-testimonial-card {
+    padding: 20px;
+  }
+  
+  .contact-hero {
+    padding: 80px 0 40px;
   }
 }
 
 @media (max-width: 576px) {
   .contact-hero {
-    padding: 80px 0 40px;
+    padding: 70px 0 30px;
+    margin-bottom: 30px;
   }
   
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .contact-section-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .contact-directions-card,
   .contact-hours-card,
   .contact-info-card,
-  .contact-testimonial-card {
-    padding: 20px;
+  .contact-collab-item {
+    padding: 15px;
   }
   
   .contact-social-links {
-    justify-content: space-around;
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    padding: 20px;
+  }
+  
+  .contact-form-button {
+    width: 100%;
+  }
+  
+  .contact-info-title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-text {
+    font-size: 0.9rem;
+  }
+  
+  .contact-form-input,
+  .contact-form-textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .contact-section-container {
+    padding: 0 15px;
+  }
+  
+  .contact-form-section,
+  .contact-info-section,
+  .contact-map-section,
+  .contact-directions-section,
+  .contact-hours-section,
+  .contact-collab-section,
+  .contact-social-section,
+  .contact-testimonials-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-title {
+    font-size: 1.4rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .contact-section-title {
+    font-size: 1.3rem;
+  }
+  
+  .contact-map-wrapper {
+    height: 250px;
+  }
+  
+  .contact-form-label {
+    font-size: 0.8rem;
+  }
+  
+  .contact-social-name {
+    font-size: 0.9rem;
+  }
+  
+  .contact-collab-item-title {
+    font-size: 1rem;
+  }
+  
+  .contact-copy-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 } 

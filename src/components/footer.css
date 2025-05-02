@@ -299,14 +299,36 @@
 }
 
 
+@media (max-width: 1200px) {
+  .alra-footer-container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  
+  .alra-footer-title {
+    font-size: 40px;
+  }
+  
+  .alra-footer-subtitle {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 992px) {
   .alra-footer-top {
     flex-direction: column;
+    align-items: flex-start;
   }
   
   .alra-footer-brand {
     flex: 0 0 100%;
     margin-bottom: 30px;
+  }
+  
+  .alra-footer-brand-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .alra-footer-links {
@@ -317,6 +339,15 @@
   
   .alra-footer-newsletter {
     flex: 0 0 100%;
+    margin-top: 30px;
+  }
+  
+  .alra-footer-title {
+    font-size: 36px;
+  }
+  
+  .alra-footer-subtitle {
+    font-size: 22px;
   }
 }
 
@@ -326,57 +357,107 @@
     gap: 30px;
   }
   
-  
+  .alra-footer-link-column {
+    width: 100%;
+  }
   
   .alra-footer-bottom {
     flex-direction: column;
+    gap: 20px;
     text-align: center;
   }
-
-
+  
+  .alra-footer-legal {
+    justify-content: center;
+  }
+  
   .alra-footer-tagline {
-    font-size: 0.9rem;
-    width: 80%;
+    text-align: left;
   }
   
   .alra-footer-brand {
-    flex: 0 0 300px;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-  }
-  .alra-footer-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .alra-footer-heading {
-    display: flex;
-    justify-content: center;
-  }
-
-  .alra-footer-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   
-
-.alra-footer-newsletter {
-  margin-bottom: 60px;
+  .alra-footer-title-subtitle {
+    align-items: flex-start;
+  }
+  
+  .alra-footer-logo {
+    margin-bottom: 20px;
+  }
+  
+  .alra-footer-tree-icon {
+    width: 40px;
+  }
+  
+  .alra-footer-heading {
+    font-size: 1rem;
+  }
+  
+  .alra-footer-menu {
+    margin-bottom: 20px;
+  }
+  
+  .alra-newsletter-form {
+    flex-direction: column;
+  }
+  
+  .alra-newsletter-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .alra-newsletter-button {
+    width: 100%;
+  }
 }
 
-.alra-contact-info {
-  color: #414628;
-  margin-right: 20px;
+@media (max-width: 576px) {
+  .alra-footer-container {
+    padding: 0 15px;
+  }
+  
+  .alra-footer-social {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .alra-footer-title {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  
+  .alra-footer-subtitle {
+    font-size: 18px;
+  }
+  
+  .alra-social-link {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .alra-scroll-button {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    bottom: 15px;
+  }
 }
 
-.alra-scroll-button {
-  margin-right: 10px;
-}
-
+@media (max-width: 400px) {
+  .alra-footer-title {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+  
+  .alra-footer-subtitle {
+    font-size: 16px;
+  }
+  
+  .alra-footer-tree-icon {
+    width: 30px;
+  }
 }
 
 /* Smooth hover effect for all links */

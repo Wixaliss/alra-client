@@ -16,10 +16,31 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Media
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest('.alra-nav-list') && !event.target.closest('.alra-burger')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMenuOpen]);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   return (
     <header className={`alra-header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="alra-navigation">
+        <div className="alra-burger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span className={`alra-burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`alra-burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`alra-burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+        </div>
 
         <ul className={`alra-nav-list ${isMenuOpen ? 'open' : ''}`}>
           <li className="alra-nav-item">

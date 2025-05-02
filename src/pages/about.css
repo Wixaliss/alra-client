@@ -317,10 +317,50 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Styles */
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .alra-story-container,
+  .alra-philosophy-container,
+  .alra-testimonials-container,
+  .alra-cta-container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  
+  .alra-img-rounded {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .alra-story-container {
+    flex-direction: column;
+  }
+  
+  .alra-story-image,
+  .alra-story-content {
+    flex: 1 0 100%;
+  }
+  
+  .alra-img-rounded {
+    height: 450px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .alra-philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .alra-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .alra-about-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   
   .alra-about-subtitle {
@@ -329,46 +369,56 @@
   
   .alra-story-title,
   .alra-philosophy-title,
-  .alra-team-title,
-  .alra-eco-title,
   .alra-testimonials-title,
   .alra-cta-title {
-    font-size: 1.4rem;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 5%;
+    font-size: 1.8rem;
+  }
+  
+  .alra-story-text {
+    font-size: 16px;
   }
   
   .alra-story-quote {
     font-size: 1rem;
   }
   
-  .alra-project-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .alra-philosophy-item {
+    padding: 20px;
   }
   
   .alra-project-icon {
-    margin-bottom: 15px;
+    max-width: 60px;
   }
   
   .alra-cta-button {
     padding: 12px 25px;
     font-size: 1rem;
   }
-
-
+  
   .alra-story-text {
-    font-size: 1rem;
-    width: 96%;
-    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
   }
-
+  
   .alra-story-title {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
   }
-
+  
+  .alra-img-rounded {
+    height: 350px;
+  }
+  
+  .alra-testimonial-author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .alra-author-info {
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -376,8 +426,83 @@
     padding: 80px 0 40px;
   }
   
+  .alra-about-title {
+    font-size: 2rem;
+  }
+  
+  .alra-about-subtitle {
+    font-size: 0.9rem;
+  }
+  
   .alra-testimonial-author {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+  }
+  
+  .alra-philosophy-grid,
+  .alra-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alra-story-section,
+  .alra-philosophy-section,
+  .alra-testimonials-section,
+  .alra-cta-section {
+    padding: 40px 0;
+  }
+  
+  .alra-story-title,
+  .alra-philosophy-title,
+  .alra-testimonials-title,
+  .alra-cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .alra-img-rounded {
+    height: 300px;
+  }
+  
+  .alra-story-container,
+  .alra-philosophy-container,
+  .alra-testimonials-container,
+  .alra-cta-container {
+    padding: 0 20px;
+  }
+  
+  .alra-cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .alra-about-title {
+    font-size: 1.8rem;
+  }
+  
+  .alra-story-title,
+  .alra-philosophy-title,
+  .alra-testimonials-title,
+  .alra-cta-title {
+    font-size: 1.3rem;
+  }
+  
+  .alra-story-text,
+  .alra-philosophy-text,
+  .alra-testimonial-text,
+  .alra-cta-text {
+    font-size: 14px;
+  }
+  
+  .alra-img-rounded {
+    height: 250px;
+  }
+  
+  .alra-about-hero {
+    padding: 70px 0 30px;
+  }
+  
+  .alra-philosophy-item {
+    padding: 15px;
   }
 } 

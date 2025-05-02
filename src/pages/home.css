@@ -791,73 +791,284 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .alra-room-container,
+  .alra-culture-container,
+  .alra-activities-container,
+  .alra-location-container,
+  .home-section-container {
+    width: 95%;
+    padding: 0 20px;
+  }
   
   .alra-title {
-    font-size: 70px;
+    font-size: 100px;
   }
   
-
   .alra-subtitle {
-    font-size: 40px;
+    font-size: 60px;
   }
-
-  .alra-book-button {
-    padding: 15px 80px;
-    font-size: 1rem;
-    margin-left: 3%;
+  
+  .alra-services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
+@media (max-width: 992px) {
+  .alra-title {
+    font-size: 80px;
+  }
+  
+  .alra-subtitle {
+    font-size: 50px;
+  }
+  
   .alra-room-container {
-    display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-  }  
-
-  .alra-culture-title {
-    font-size: 1.5rem;
+    gap: 40px;
   }
-
-
+  
   .alra-culture-content {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-bottom: 60px;
-    gap: 1px;
+    gap: 40px;
   }
-
-  .alra-culture-section {
-    padding: 50px 0;
+  
+  .alra-culture-text {
+    width: 100%;
   }
   
   .alra-slider-wrapper {
     width: 100%;
-    margin-top: 20px;
-    padding: 0;
   }
+  
+  .alra-location-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .alra-location-map-container,
+  .alra-location-address {
+    width: 100%;
+  }
+  
+  .alra-tabs-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .alra-form-row {
+    flex-direction: column;
+  }
+  
+  .alra-form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alra-title {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+  
+  .alra-subtitle {
+    font-size: 36px;
+  }
+  
+  .alra-book-button {
+    padding: 12px 80px;
+    font-size: 14px;
+  }
+  
+  .alra-room-container {
+    width: 90%;
+    gap: 30px;
+  }
+  
+  .alra-culture-title, 
+  .alra-activities-title, 
+  .alra-location-title,
+  .alra-room-title {
+    font-size: 28px;
+  }
+  
+  .alra-culture-content {
+    gap: 30px;
+  }
+  
+  .alra-culture-section {
+    padding: 60px 0;
+  }
+  
+  .alra-slider-wrapper {
+    height: 300px;
+  }
+  
   .alra-book-room-button {
-    margin-left: 50px;
+    padding: 10px 40px;
   }
+  
   .alra-room-desc {
-    margin-bottom: 3px;
+    font-size: 16px;
   }
-
+  
   .alra-location-content {
-    margin-bottom: 5px;
+    gap: 25px;
   }
-
-  .alra-location-content {
-    margin-bottom: 5px;
+  
+  .alra-services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .alra-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .alra-tree-icon {
+    width: 50px;
+  }
+  
+  .alra-slider-image {
+    height: 350px;
+  }
+  
+  .slick-center .alra-slick-image {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 576px) {
+  .alra-main-content {
+    padding: 0 15px;
+  }
+  
+  .alra-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  
+  .alra-subtitle {
+    font-size: 28px;
+  }
+  
+  .alra-book-button {
+    padding: 10px 50px;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  
+  .alra-room-section,
+  .alra-culture-section,
+  .alra-activities-section,
+  .alra-location-section {
+    padding: 50px 0;
+  }
+  
+  .alra-room-title,
+  .alra-culture-title,
+  .alra-activities-title,
+  .alra-location-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .alra-culture-subtitle,
+  .alra-activities-subtitle,
+  .alra-location-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .alra-room-desc {
+    font-size: 14px;
+  }
+  
+  .alra-slider-image {
+    height: 300px;
+  }
+  
+  .alra-tab-button {
+    padding: 10px;
+    min-width: auto;
+    font-size: 12px;
+  }
+  
+  .alra-tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .alra-service-title {
+    font-size: 18px;
+  }
+  
+  .alra-service-description {
+    font-size: 14px;
+  }
+  
+  .alra-service-button {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  
+  .alra-address-title {
+    font-size: 18px;
+  }
+  
+  .alra-address-text,
+  .alra-contact-text {
+    font-size: 14px;
+  }
+  
+  .alra-address-copy, 
+  .alra-address-directions {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .alra-map-placeholder {
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .alra-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+  
+  .alra-subtitle {
+    font-size: 22px;
+  }
+  
+  .alra-tree-icon {
+    width: 40px;
+  }
+  
+  .alra-book-button {
+    padding: 8px 40px;
+    font-size: 12px;
+  }
+  
+  .alra-slider-image {
+    height: 250px;
+  }
+  
+  .alra-tab-button {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  .alra-service-card {
+    padding: 15px;
+  }
+  
+  .alra-tabs-container {
+    margin-top: 20px;
   }
 }
