@@ -424,8 +424,8 @@
   }
   
   .alra-newsletter-button {
-    width: 20%;
-    font-size: 0.7rem;
+    width: 25%;
+    font-size: 0.8rem;
   }
 }
 
@@ -434,6 +434,11 @@
     padding: 0 15px;
   }
   
+  .alra-newsletter-button {
+    margin-right: 2%;
+    font-size: 0.5rem;
+    margin-top: 1%;
+  }
   .alra-footer-social {
     justify-content: center;
     width: 100%;
@@ -473,6 +478,19 @@
   
   .alra-footer-tree-icon {
     width: 30px;
+  }
+
+  .alra-newsletter-button {
+    width: 30%;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 320px) {
+  
+    .alra-newsletter-button {
+      width: 30%;
+      font-size: 0.6rem;
+    }
   }
 }
 

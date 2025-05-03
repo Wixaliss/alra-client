@@ -337,7 +337,7 @@ const Home = () => {
                 <div className="alra-contact-info">
                   <div className="alra-contact-item">
                   <img src="https://i.postimg.cc/0QLHg0JH/ic-round-phone.png" alt="location" className="alra-contact-icon" />
-                    <p className="alra-contact-text">+7 (940) 123-45-67</p>
+                    <p className="alra-contact-text">+7 (940) 717-99-88</p>
                   </div>
                   <div className="alra-contact-item">
                   <img src="https://i.postimg.cc/x1DPRZy7/Group-2.png" alt="location" className="alra-contact-icon" />
@@ -345,7 +345,7 @@ const Home = () => {
                   </div>
                   <div className="alra-contact-item">
                   <img src="https://i.postimg.cc/DwK67NDh/Frame-1458.png" alt="location" className="alra-contact-icon" />
-                    <p className="alra-contact-text">Заезд с 14:00, выезд до 12:00</p>
+                    <p className="alra-contact-text">Заезд с 13:00, выезд до 12:00</p>
                   </div>
                 </div>
               </div>

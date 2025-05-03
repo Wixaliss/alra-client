@@ -557,7 +557,7 @@
 
 .alra-form-input,
 .alra-form-select {
-  width: 100%;
+  width: 90%;
   padding: 12px 15px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -1051,7 +1051,10 @@
   .alra-slider-image {
     height: 300px;
   }
-  
+  .alra-booking-form {
+    width: 250px;
+
+  }
   .alra-tab-button {
     padding: 10px;
     min-width: auto;
@@ -1100,6 +1103,7 @@
   .alra-map-placeholder {
     height: 250px;
   }
+
 }
 
 @media (max-width: 400px) {
@@ -1137,5 +1141,65 @@
   
   .alra-tabs-container {
     margin-top: 20px;
+  }
+
+   
+  .alra-room-title,
+  .alra-culture-title,
+  .alra-activities-title,
+  .alra-location-title {
+    font-size: 1.4rem;
+  } 
+
+  .alra-culture-paragraph {
+    font-size: 1.4rem;
+  }
+
+
+  .alra-activities-cta-text {
+    font-size: 1.2rem;
+  }
+
+
+.alra-booking-form {
+  width: 250px;
+  margin-left: -15px;
+}
+.alra-location-content {
+  margin-left: -10%;
+}
+
+}
+@media (max-width: 380px) {
+  .alra-booking-form {
+    width: 250px;
+    margin-left: -30px;
+  }
+
+  @media (max-width: 380px) {
+    .alra-booking-form {
+      width: 250px;
+      margin-left: -30px;
+    }
+    .alra-location-content {
+      margin-left: -17%;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .alra-booking-form {
+      width: 250px;
+      margin-left: -40px;
+    }
+    .alra-location-content {
+      margin-left: -20%;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .alra-booking-form {
+      width: 250px;
+      margin-left: -50px;
+    }
   }
 }

@@ -774,6 +774,9 @@
   .contact-social-links {
     grid-template-columns: 1fr;
   }
+  .contact-info-grid {
+    width: 300px;
+  }
   
   .contact-form {
     padding: 20px;
@@ -799,6 +802,7 @@
   
   .contact-section-container {
     padding: 0 15px;
+    
   }
   
   .contact-form-section,
@@ -846,4 +850,8 @@
     font-size: 0.8rem;
     padding: 6px 12px;
   }
+  .contact-info-grid {
+    width: 250px;
+  }
+  
 } 

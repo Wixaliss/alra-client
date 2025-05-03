@@ -22,16 +22,6 @@ const Footer = () => {
 
   return (
     <footer className="alra-footer">
-        <button 
-          className="alra-scroll-button" 
-          onClick={() => {
-            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          
-          aria-label="Прокрутить наверх"
-        >
-      ⌃
-    </button>
       <div className="alra-footer-container">
         <div className="alra-footer-top">
           <div className="alra-footer-brand-links"> 

@@ -271,7 +271,6 @@ const Contacts = () => {
                 <ul className="contact-hours-list">
                   <li className="contact-hours-item">
                     <span className="contact-hours-day">Завтрак</span>
-                    <span className="contact-hours-time">08:00 - 10:00</span>
                   </li>
                 </ul>
               </div>

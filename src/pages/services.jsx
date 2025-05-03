@@ -154,7 +154,7 @@ const Services = () => {
                 </p>
               </div>
             ) : (
-              <form className="alra-booking-form" onSubmit={handleFormSubmit}>
+              <form className="alra-service-booking-form" onSubmit={handleFormSubmit}>
                 <div className="alra-booking-form-grid">
                   <div className="alra-form-group">
                     <label className="alra-form-label">Ваше имя*</label>
