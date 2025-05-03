@@ -848,6 +848,12 @@
   .alra-culture-text {
     width: 100%;
   }
+
+
+.alra-slick-image {
+  height: 250px;
+}
+
   
   .alra-slider-wrapper {
     width: 100%;
@@ -897,6 +903,10 @@
     letter-spacing: 6px;
   }
   
+  .alra-slick-image {
+    height: 200px;
+  }
+  
 
   .alra-subtitle {
     font-size: 36px;
@@ -930,7 +940,7 @@
   }
   
   .alra-slider-wrapper {
-    height: 300px;
+    height: 100px;
   }
   
   .alra-book-room-button {

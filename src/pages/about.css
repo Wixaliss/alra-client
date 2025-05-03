@@ -419,6 +419,10 @@
     margin-top: 10px;
     text-align: center;
   }
+  .alra-testimonials-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
@@ -438,11 +442,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  .alra-philosophy-grid,
-  .alra-testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+
   
   .alra-story-section,
   .alra-philosophy-section,

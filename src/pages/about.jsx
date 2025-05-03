@@ -85,24 +85,6 @@ const About = () => {
             <h2 className="alra-testimonials-title">Отзывы наших гостей</h2>
             
             <div className="alra-testimonials-grid">
-              <div className="alra-testimonial-card">
-                <div className="alra-testimonial-content">
-                  <p className="alra-testimonial-text">
-                    "Потрясающее место для отдыха! В Абхазии уже второй раз, хочется возвращаться снова и снова. В этот раз решили остановаиться в Алра. Чистый воздух, уютные домики, вкусная еда и 
-                    дружелюбный персонал. Провели неделю и обязательно вернемся в будущем."
-                  </p>
-                </div>
-                <div className="alra-testimonial-author">
-                  <div className="alra-author-photo">
-                    <img src="https://i.postimg.cc/65nXZ5Rs/kqajk0xyhm84fywysrhbzmpvfqylih2q.png" alt="Мария К." />
-                  </div>
-                  <div className="alra-author-info">
-                    <h4 className="alra-author-name">Мария К.</h4>
-                    <p className="alra-author-location">Москва</p>
-                    <div className="alra-author-rating">★★★★★</div>
-                  </div>
-                </div>
-              </div>
               
               <div className="alra-testimonial-card">
                 <div className="alra-testimonial-content">
