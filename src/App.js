@@ -7,7 +7,6 @@ import Services from './pages/services';
 import Contacts from './pages/contacts';
 import AccommodationPolicy from './components/information/AccommodationPolicy';
 import HouseRules from './components/information/HouseRules';
-import BookingTerms from './components/information/BookingTerms';
 import '../src/components/fonts.css';
 
 
@@ -22,7 +21,6 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/privacy-policy" element={<AccommodationPolicy />} />
           <Route path="/house-rules" element={<HouseRules />} />
-          <Route path="/booking-terms" element={<BookingTerms />} />
         </Routes>
       </Router>
     </div>

@@ -413,6 +413,9 @@
   width: 15%;
 }
 
+.contact-collab-icon-goods {
+  width: 6%;
+}
 .contact-collab-item-title {
   font-size: 1rem;
   color: #414628;
@@ -581,6 +584,15 @@
   .contact-form {
     padding: 30px;
   }
+
+  
+  .contact-info-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 992px) {
@@ -588,6 +600,11 @@
     font-size: 2.2rem;
   }
   
+  .contact-info-grid {
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
   .contact-collab-options {
     flex-wrap: wrap;
   }
@@ -623,12 +640,24 @@
   .contact-testimonials-section {
     padding: 50px 0;
   }
+  .contact-info-text {
+    font-size: 0.6rem;
+  }
+  .contact-copy-btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
 }
 
 @media (max-width: 768px) {
   .contact-title {
     font-size: 1.8rem;
   }
+
+  .contact-collab-icon {
+    width: 10%;
+  }
+  
   
   .contact-subtitle {
     font-size: 1rem;
@@ -642,7 +671,14 @@
     grid-template-columns: 1fr;
     gap: 15px;
   }
+  .contact-info-grid {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
   
+
   .contact-form-full {
     grid-column: 1;
   }
@@ -652,6 +688,10 @@
     margin-bottom: 20px;
   }
   
+  .contact-info-section {
+    display: flex;
+    flex-direction: column;
+  }
   .contact-form {
     padding: 25px;
   }
@@ -686,7 +726,8 @@
   .contact-info-card {
     padding: 20px;
   }
-  
+
+
   .contact-directions-grid,
   .contact-hours-wrapper {
     grid-template-columns: 1fr;
@@ -703,6 +744,9 @@
   
   .contact-hero {
     padding: 80px 0 40px;
+  }
+  .contact-info-text {
+    font-size: 0.9rem;
   }
 }
 

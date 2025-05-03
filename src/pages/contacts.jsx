@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import 'leaflet/dist/leaflet.css';

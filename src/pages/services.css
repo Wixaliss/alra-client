@@ -347,6 +347,10 @@
 }
 
 /* Адаптивность */
+
+@media (max-width: 1200px) {
+
+}
 @media (max-width: 992px) {
   .alra-service-items {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -406,7 +410,6 @@
   .alra-services-container,
   .alra-service-section-container {
     max-width: 100%;
-    padding: 0 30px;
   }
   
   .alra-service-grid {
@@ -437,7 +440,7 @@
   }
   
   .alra-service-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   
   .alra-service-grid {
@@ -489,7 +492,7 @@
   }
   
   .alra-service-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .alra-service-subtitle {

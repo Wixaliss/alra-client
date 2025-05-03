@@ -24,13 +24,17 @@ const Footer = () => {
     <footer className="alra-footer">
         <button 
           className="alra-scroll-button" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          
           aria-label="Прокрутить наверх"
         >
       ⌃
     </button>
       <div className="alra-footer-container">
         <div className="alra-footer-top">
+          <div className="alra-footer-brand-links"> 
           <div className="alra-footer-brand">
             <div className="alra-footer-logo">
               <img src="https://i.postimg.cc/JnW3rTR9/Magic-Eraser-250403-143630-2.png" alt="Alra" className="alra-footer-tree-icon" />
@@ -91,14 +95,15 @@ const Footer = () => {
               )}
             </form>
           </div>
+          </div>
       </div>
       <div className="alra-footer-bottom-bg">
           <div className="alra-footer-bottom">
             <div className="alra-footer-copyright">
               <p>&copy; {new Date().getFullYear()} ALRA Eco Village. Все права защищены.</p>
             </div>
-              <Link to="/privacy" className="alra-legal-link">Политика конфиденциальности</Link>
-            <Link to="/terms" className="alra-legal-link">Условия использования</Link>
+              <Link to="/privacy-policy" className="alra-legal-link">Политика конфиденциальности</Link>
+            <Link to="/house-rules" className="alra-legal-link">Правила проживания</Link>
           </div>
         </div>
     </footer>

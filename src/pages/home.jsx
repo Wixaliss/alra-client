@@ -307,10 +307,6 @@ const Home = () => {
                               </MapContainer>
                             </div>
                           </div>
-                <div className="alra-map-pin">
-                  <span className="alra-map-pin-icon">📍</span>
-                  <span className="alra-map-pin-pulse"></span>
-                </div>
               </div>
               
               

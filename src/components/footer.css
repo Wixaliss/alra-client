@@ -8,8 +8,11 @@
 
 .alra-footer-container {
   max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .alra-footer-top {
@@ -18,7 +21,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-  gap: 30px;
 }
 
 .alra-footer-brand-links {
@@ -212,6 +214,7 @@
 .alra-newsletter-input {
   width: 100%;
   padding: 14px;
+  margin-bottom: 30px;
   border: none;
   border-radius: 4px;
   background-color: rgba(137, 150, 137, 0.2);
@@ -312,49 +315,54 @@
   .alra-footer-subtitle {
     font-size: 24px;
   }
+
+
+
 }
 
 @media (max-width: 992px) {
-  .alra-footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .alra-footer-brand {
-    flex: 0 0 100%;
-    margin-bottom: 30px;
-  }
-  
   .alra-footer-brand-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .alra-location-address {
+
   }
   
   .alra-footer-links {
-    width: 100%;
-    justify-content: space-between;
+    width: 20%;
     margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
   }
   
   .alra-footer-newsletter {
-    flex: 0 0 100%;
-    margin-top: 30px;
+    flex: 0 0 90%;
+    margin: 0 auto;
   }
   
   .alra-footer-title {
     font-size: 36px;
+
   }
   
   .alra-footer-subtitle {
     font-size: 22px;
   }
+  .alra-footer-heading {
+    font-size: 1rem;
+    margin-top: 10%;
+  }
+
 }
 
 @media (max-width: 768px) {
   .alra-footer-links {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   
   .alra-footer-link-column {
@@ -372,13 +380,19 @@
   }
   
   .alra-footer-tagline {
-    text-align: left;
+    text-align: center;
+
   }
   
   .alra-footer-brand {
-    align-items: flex-start;
+    align-items: center;
+      flex: 0 0 200px;
   }
   
+  .alra-footer-brand-links {
+    display: flex;
+    flex-direction: column;
+  }
   .alra-footer-title-subtitle {
     align-items: flex-start;
   }
@@ -393,6 +407,7 @@
   
   .alra-footer-heading {
     font-size: 1rem;
+    margin-top: 10%;
   }
   
   .alra-footer-menu {
@@ -409,7 +424,8 @@
   }
   
   .alra-newsletter-button {
-    width: 100%;
+    width: 20%;
+    font-size: 0.7rem;
   }
 }
 
@@ -419,7 +435,7 @@
   }
   
   .alra-footer-social {
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
   }
   
