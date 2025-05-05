@@ -1,0 +1,112 @@
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.admin-sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.admin-logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.admin-user-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.admin-user-info p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.admin-user-info span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.admin-nav {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.admin-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-nav li {
+  margin-bottom: 5px;
+}
+
+.admin-nav li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.admin-nav li a:hover {
+  background-color: #444;
+}
+
+.admin-nav li.active a {
+  background-color: #4CAF50;
+  font-weight: 600;
+}
+
+.admin-nav li i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.admin-sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #444;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.logout-button i {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+} 

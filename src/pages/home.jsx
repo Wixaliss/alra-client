@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -7,14 +7,76 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import './home.css';
 import 'leaflet/dist/leaflet.css';
+import roomService from '../services/roomService';
+import RoomsResultModal from '../components/RoomsResultModal';
+import { useBooking } from '../contexts/BookingContext';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab] = useState('recreation');
   const [showServiceDetails, setShowServiceDetails] = useState(null);
   const [copySuccess, setCopySuccess] = useState('');
+  const [showResultsModal, setShowResultsModal] = useState(false);
+  const [availableRooms, setAvailableRooms] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [bookingForm, setBookingForm] = useState({
+    checkIn: '',
+    checkOut: '',
+    guests: 1,
+    roomType: 'standard' // standard, lux, family
+  });
   
+  // Используем контекст для бронирования
+  const { openBookingModal } = useBooking();
 
+  // Fetch available rooms when component mounts
+  useEffect(() => {
+    fetchAvailableRooms();
+  }, []);
+
+  const fetchAvailableRooms = async () => {
+    try {
+      setLoading(true);
+      const response = await roomService.getAllAvailableRooms();
+      setAvailableRooms(response.data || []);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching available rooms:', error);
+      setLoading(false);
+    }
+  };
+
+  const handleBookingFormChange = (e) => {
+    const { name, value } = e.target;
+    setBookingForm({
+      ...bookingForm,
+      [name]: value
+    });
+  };
+
+  const handleSubmitAvailabilityCheck = async (e) => {
+    e.preventDefault();
+    
+    try {
+      setLoading(true);
+      // Проверяем доступность комнат выбранного типа
+      const results = await roomService.checkAvailability(
+        bookingForm.checkIn, 
+        bookingForm.checkOut, 
+        bookingForm.guests, 
+        bookingForm.roomType
+      );
+      
+      setSearchResults(results.data || []);
+      setShowResultsModal(true);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error checking availability:', error);
+      setLoading(false);
+    }
+  };
+  
   const roomImages = [
     'https://i.postimg.cc/B6Q5ym4s/Frame-1499.png',
     'https://i.postimg.cc/28FQkpym/Frame-1500.png',
@@ -113,6 +175,10 @@ const Home = () => {
       });
   };
   
+  const closeResultsModal = () => {
+    setShowResultsModal(false);
+  };
+  
   return (
     <div className="alra-home-container">
       <div className="alra-background-overlay"></div>
@@ -128,7 +194,7 @@ const Home = () => {
             <h2 className="alra-subtitle" style={{ fontFamily: 'masvol', letterSpacing: '1px', transform: 'scaleY(0.75)' }}>Eco Village</h2>
             </div>
           </div>
-          <button className="alra-book-button">Забронировать</button>
+          <button className="alra-book-button" onClick={() => openBookingModal()}>Забронировать</button>
         </div>
       </main>
       
@@ -157,7 +223,7 @@ const Home = () => {
               Веранда с уличной мебелью;
             </p>
             
-            <button className="alra-book-room-button">Забронировать</button>
+            <button className="alra-book-room-button" onClick={() => openBookingModal()}>Забронировать</button>
           </div>
           
           <div className="alra-room-slider">
@@ -256,26 +322,65 @@ const Home = () => {
           
           <div className="alra-activities-cta">
             <p className="alra-activities-cta-text">Забронируйте свой отдых в ALRA Eco Village уже сегодня!</p>
-            <form className="alra-booking-form">
+            <form className="alra-booking-form" onSubmit={handleSubmitAvailabilityCheck}>
               <div className="alra-form-row">
                 <div className="alra-form-group">
                   <label className="alra-form-label">Дата заезда</label>
-                  <input type="date" className="alra-form-input" />
+                  <input 
+                    type="date" 
+                    className="alra-form-input" 
+                    name="checkIn"
+                    value={bookingForm.checkIn}
+                    onChange={handleBookingFormChange}
+                    required
+                  />
                 </div>
                 <div className="alra-form-group">
                   <label className="alra-form-label">Дата выезда</label>
-                  <input type="date" className="alra-form-input" />
+                  <input 
+                    type="date" 
+                    className="alra-form-input" 
+                    name="checkOut"
+                    value={bookingForm.checkOut}
+                    onChange={handleBookingFormChange}
+                    required
+                  />
                 </div>
                 <div className="alra-form-group">
                   <label className="alra-form-label">Гости</label>
-                  <select className="alra-form-select">
-                    <option>1 гость</option>
-                    <option>2 гостя</option>
-                    <option>3 гостя</option>
-                    <option>4 гостя</option>
+                  <select 
+                    className="alra-form-select"
+                    name="guests"
+                    value={bookingForm.guests}
+                    onChange={handleBookingFormChange}
+                  >
+                    <option value="1">1 гость</option>
+                    <option value="2">2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
                   </select>
                 </div>
-                <button type="submit" className="alra-form-button">Проверить доступность</button>
+                <div className="alra-form-group">
+                  <label className="alra-form-label">Тип комнаты</label>
+                  <select 
+                    className="alra-form-select"
+                    name="roomType"
+                    value={bookingForm.roomType}
+                    onChange={handleBookingFormChange}
+                    required
+                  >
+                    <option value="standard">Обычный номер</option>
+                    <option value="lux">Люкс номер</option>
+                    <option value="family">Семейный номер</option>
+                  </select>
+                </div>
+                <button 
+                  type="submit" 
+                  className="alra-form-button"
+                  disabled={loading}
+                >
+                  {loading ? 'Поиск...' : 'Проверить доступность'}
+                </button>
               </div>
             </form>
           </div>
@@ -354,6 +459,16 @@ const Home = () => {
       </section>
       
       <Footer />
+      
+      {/* Модальное окно результатов поиска */}
+      <RoomsResultModal 
+        isOpen={showResultsModal}
+        onClose={closeResultsModal}
+        rooms={searchResults}
+        checkIn={bookingForm.checkIn}
+        checkOut={bookingForm.checkOut}
+        guests={bookingForm.guests}
+      />
     </div>
   );
 };

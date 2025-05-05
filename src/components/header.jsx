@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.css';
+import { useBooking } from '../contexts/BookingContext';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { openBookingModal } = useBooking();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +34,13 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  // Обработчик кнопки бронирования
+  const handleBooking = (e) => {
+    e.preventDefault();
+    openBookingModal();
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={`alra-header ${scrolled ? 'scrolled' : ''}`}>
@@ -64,9 +73,9 @@ const Header = () => {
             </Link>
           </li>
           <li className="alra-nav-item alra-nav-book">
-            <Link to="/book" onClick={() => setIsMenuOpen(false)}>
+            <a href="#" onClick={handleBooking}>
               Забронировать
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

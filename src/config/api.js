@@ -1,0 +1,16 @@
+// Конфигурация API
+const API_CONFIG = {
+  // Базовый URL API
+  BASE_URL: 'http://localhost:5000/api',
+  
+  // Таймаут запроса (в миллисекундах)
+  TIMEOUT: 15000,
+  
+  // Заголовки по умолчанию
+  DEFAULT_HEADERS: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+};
+
+export default API_CONFIG; 

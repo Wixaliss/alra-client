@@ -530,7 +530,7 @@
 }
 
 .alra-booking-form {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -544,7 +544,7 @@
 
 .alra-form-group {
   flex: 1;
-  min-width: 200px;
+  min-width: 150px;
   text-align: left;
 }
 
@@ -557,7 +557,7 @@
 
 .alra-form-input,
 .alra-form-select {
-  width: 90%;
+  width: 100%;
   padding: 12px 15px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -566,7 +566,7 @@
 }
 
 .alra-form-button {
-  padding: 13px 30px;
+  padding: 13px 20px;
   font-size: 16px;
   background-color: #414628;
   color: white;
@@ -574,7 +574,9 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  min-width: 200px;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 0 0 auto;
 }
 
 .alra-form-button:hover {

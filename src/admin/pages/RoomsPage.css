@@ -1,0 +1,339 @@
+.rooms-container {
+  padding: 0 0 20px 0;
+}
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rooms-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.add-room-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-room-button:hover {
+  background-color: #388e3c;
+}
+
+.add-room-button i {
+  margin-right: 8px;
+}
+
+.rooms-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.rooms-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.rooms-empty {
+  background-color: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.room-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.room-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #999;
+}
+
+.room-info {
+  padding: 15px;
+}
+
+.room-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.room-price {
+  font-weight: 600;
+  color: #4CAF50;
+  margin: 0 0 5px 0;
+}
+
+.room-capacity {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.room-capacity i {
+  margin-right: 5px;
+}
+
+.room-actions {
+  display: flex;
+  padding: 0 15px 15px;
+  justify-content: flex-end;
+}
+
+.edit-button, .delete-button, .status-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  background-color: #2196F3;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.status-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.status-button:hover {
+  background-color: #e68a00;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Стили для модального окна удаления */
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.delete-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.delete-warning {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancel-button, .confirm-button {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.cancel-button:hover {
+  background-color: #e5e5e5;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.confirm-button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .rooms-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .add-room-button {
+    margin-top: 10px;
+  }
+  
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.room-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.status-available {
+  color: #4caf50;
+}
+
+.status-occupied {
+  color: #f44336;
+}
+
+.status-maintenance {
+  color: #ff9800;
+}
+
+/* Стили для модального окна статуса */
+.status-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.status-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.status-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.status-buttons {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-option {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.status-option:hover {
+  opacity: 0.9;
+}
+
+.status-available {
+  background-color: #4caf50;
+}
+
+.status-occupied {
+  background-color: #f44336;
+}
+
+.status-maintenance {
+  background-color: #ff9800;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+} 
