@@ -31,7 +31,7 @@ const Contacts = () => {
   const addressRef = useRef(null);
 
   // ALRA position coordinates in Abkhazia
-  const position = [43.0071, 41.0153]; // Approximate coordinates for Abkhazia
+  const position = [42.79312946619807, 41.2866258927546]; // Approximate coordinates for Abkhazia
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -65,12 +65,6 @@ const Contacts = () => {
   };
 
   const testimonials = [
-    {
-      name: 'Мария К.',
-      photo: 'https://i.postimg.cc/65nXZ5Rs/kqajk0xyhm84fywysrhbzmpvfqylih2q.png',
-      text: 'Потрясающее место для отдыха! В Абхазии уже второй раз, хочется возвращаться снова и снова. В этот раз решили остановаиться в Алра. Чистый воздух, уютные домики, вкусная еда и дружелюбный персонал. Провели неделю и обязательно вернемся в будущем.',
-      rating: 5
-    },
     {
       name: 'Сергей Д.',
       photo: 'https://i.postimg.cc/HkmC9D4r/1678385566.jpg',

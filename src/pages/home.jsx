@@ -86,7 +86,7 @@ const Home = () => {
     'https://i.postimg.cc/QxNjYPBV/Frame-1494.png'
   ];
 
-  const position = [43.0071, 41.0153]; // Approximate coordinates for Abkhazia
+  const position = [42.79373567971232, 41.28740909777744]; // Approximate coordinates for Abkhazia
   const activities = {
     recreation: [
       {
@@ -104,7 +104,7 @@ const Home = () => {
       {
         id: 'cycling',
         title: 'WI-FI',
-        description: 'Во всех нкоттеджах уверенный сигнал скоростного Wi-fi.',
+        description: 'Во всех коттеджах уверенный сигнал скоростного Wi-fi.',
         icon: 'https://i.postimg.cc/Vsp4VvWd/Frame-1457.png',
       },
       {
