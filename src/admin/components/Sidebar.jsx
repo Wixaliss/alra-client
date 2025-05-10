@@ -47,11 +47,6 @@ const Sidebar = () => {
               <i className="fas fa-envelope"></i> Сообщения
             </Link>
           </li>
-          <li className={isActive('/admin/content') ? 'active' : ''}>
-            <Link to="/admin/content">
-              <i className="fas fa-file-alt"></i> Контент
-            </Link>
-          </li>
           <li className={isActive('/admin/services') ? 'active' : ''}>
             <Link to="/admin/services">
               <i className="fas fa-concierge-bell"></i> Услуги

@@ -105,13 +105,13 @@ const ServicesPage = () => {
                     <td>{service.price}</td>
                     <td className="actions-cell">
                       <Link to={`/admin/services/edit/${service.id}`} className="edit-button">
-                        Редактировать
+                        
                       </Link>
                       <button 
                         className="delete-button"
                         onClick={() => handleDeleteClick(service)}
                       >
-                        Удалить
+                        
                       </button>
                     </td>
                   </tr>

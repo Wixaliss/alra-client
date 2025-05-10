@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import AdminLayout from '../components/AdminLayout';
 import bookingService from '../services/bookingService';
@@ -12,7 +12,7 @@ const BookingDetailPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchBookingDetails = async () => {
+  const fetchBookingDetails = useCallback(async () => {
     try {
       setLoading(true);
       const response = await bookingService.getBookingById(id);
@@ -23,11 +23,11 @@ const BookingDetailPage = () => {
       setError('Ошибка загрузки данных бронирования');
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchBookingDetails();
-  }, [id, fetchBookingDetails]);
+  }, [fetchBookingDetails]);
 
   const handleStatusChange = async (newStatus) => {
     try {

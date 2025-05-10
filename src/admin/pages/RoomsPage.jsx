@@ -108,7 +108,15 @@ const RoomsPage = () => {
               <div key={room.id} className="room-card">
                 <div className="room-image">
                   {room.images && room.images.length > 0 ? (
-                    <img src={room.images[0].imageUrl} alt={room.title} />
+                    <>
+                      <img
+                        src={room.images[0].imageUrl}
+                        alt={room.title}
+                        onError={e => { e.target.style.display = 'none'; e.target.parentNode.querySelector('.no-image').style.display = 'flex'; }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px 16px 0 0', display: 'block' }}
+                      />
+                      <div className="no-image" style={{ display: 'none' }}>Нет изображения</div>
+                    </>
                   ) : (
                     <div className="no-image">Нет изображения</div>
                   )}
