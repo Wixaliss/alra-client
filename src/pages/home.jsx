@@ -370,8 +370,6 @@ const Home = () => {
                     required
                   >
                     <option value="standard">Обычный номер</option>
-                    <option value="lux">Люкс номер</option>
-                    <option value="family">Семейный номер</option>
                   </select>
                 </div>
                 <button 

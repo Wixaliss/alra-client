@@ -95,6 +95,9 @@
 .alra-service-active .alra-service-category-header {
   background-color: #414628;
   color: white;
+  .alra-service-category-title {
+    color: white;
+  }
 }
 
 .alra-service-category-icon {
@@ -111,6 +114,7 @@
 
 .alra-service-active .alra-service-category-icon {
   background-color: rgba(255, 255, 255, 0.2);
+  
 }
 
 .alra-service-category-title {

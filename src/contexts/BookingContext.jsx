@@ -9,7 +9,7 @@ export const BookingProvider = ({ children }) => {
   const [showBookingModal, setShowBookingModal] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState({
     id: 4,
-    title: 'Люкс',
+    title: 'Стандартный номер',
     price: 20000
   });
   

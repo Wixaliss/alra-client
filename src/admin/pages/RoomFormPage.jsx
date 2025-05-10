@@ -313,9 +313,7 @@ const RoomFormPage = () => {
                 onChange={handleInputChange}
                 required
               >
-                <option value="standard">Обычный номер</option>
-                <option value="lux">Люкс номер</option>
-                <option value="family">Семейный номер</option>
+                <option value="standard">Стандартный номер</option>
               </select>
             </div>
           </div>

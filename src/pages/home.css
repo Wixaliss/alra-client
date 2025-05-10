@@ -892,6 +892,7 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 7%;
   }
   .alra-tree-icon {
     width: 15%;
@@ -901,7 +902,7 @@
 
 @media (max-width: 768px) {
   .alra-title {
-    font-size: 60px;
+    font-size: 80px;
     letter-spacing: 6px;
   }
   
@@ -911,7 +912,7 @@
   
 
   .alra-subtitle {
-    font-size: 36px;
+    font-size: 46px;
   }
   
   .alra-book-button {
@@ -969,7 +970,7 @@
   }
   
   .alra-tree-icon {
-    width: 12%;
+    width: 14%;
     margin-bottom: 2%;
   }
   .alra-slider-image {
@@ -1012,7 +1013,7 @@
     padding: 10%;
   }
   .alra-title {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 4px;
   }
   
@@ -1021,9 +1022,9 @@
   }
   
   .alra-book-button {
-    padding: 10px 50px;
+    padding: 10px 55px;
     font-size: 13px;
-    margin-top: 20px;
+    margin-top: 5px;
   }
   
   .alra-room-section,
@@ -1074,7 +1075,7 @@
   }
   
   .alra-tab-icon {
-    width: 18px;
+    width: 22px;
     height: 18px;
   }
   
@@ -1091,9 +1092,8 @@
     font-size: 12px;
   }
 
-
   .alra-culture-container {
-    margin-top: -5%;
+    margin-top: -15%;
     padding: 10%;
   }
   
@@ -1115,17 +1115,21 @@
   .alra-map-placeholder {
     height: 250px;
   }
-
+  .alra-tree-icon {
+    width: 15%;
+    margin-bottom: 3%;
+  }
+  
 }
 
 @media (max-width: 400px) {
   .alra-title {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 3px;
   }
   
   .alra-subtitle {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
   
   .alra-tree-icon {
@@ -1134,7 +1138,7 @@
   }
   
   .alra-book-button {
-    padding: 8px 40px;
+    padding: 8px 50px;
     font-size: 12px;
   }
   
@@ -1181,6 +1185,7 @@
   margin-left: -10%;
 }
 
+
 }
 @media (max-width: 380px) {
   .alra-booking-form {
@@ -1188,16 +1193,14 @@
     margin-left: -30px;
   }
 
-  @media (max-width: 380px) {
-    .alra-booking-form {
-      width: 250px;
-      margin-left: -30px;
-    }
-    .alra-location-content {
-      margin-left: -17%;
-    }
+  .alra-location-content {
+    margin-left: -17%;
   }
-
+  .alra-tree-icon {
+    width: 17%;
+    margin-bottom: 5%;
+  }
+ }
   @media (max-width: 340px) {
     .alra-booking-form {
       width: 250px;
@@ -1206,6 +1209,11 @@
     .alra-location-content {
       margin-left: -20%;
     }
+    .alra-tree-icon {
+      width: 19%;
+      margin-bottom: 5%;
+    }
+    
   }
 
   @media (max-width: 300px) {
@@ -1213,5 +1221,8 @@
       width: 250px;
       margin-left: -50px;
     }
+    .alra-tree-icon {
+      width: 21%;
+      margin-bottom: 8%;
+    }
   }
-}
